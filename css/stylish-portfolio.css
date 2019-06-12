@@ -45,6 +45,13 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.text-main {
+  color: rgba(30, 81, 117, 1);
+  text-align: center;
+  position: relative; 
+	top: -90px;
+}
+
 /* Map */
 .map {
   height: 30rem;
