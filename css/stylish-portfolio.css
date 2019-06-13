@@ -339,6 +339,15 @@ a:hover, a:focus, a:active {
   color: #155d74;
 }
 
+.btn-circle {
+  /* display:block; */
+  height: 110px;
+  width: 110px;
+  border-radius: 100%;
+  position: relative;
+  bottom: 125px;
+}
+
 .btn-primary {
   background-color: #1D809F !important;
   border-color: #1D809F !important;
