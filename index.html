@@ -84,7 +84,7 @@
         <img src="img/profile_pic.jpg" alt="Profile Pic" 
                 style="vertical-align:middle;float:left;width:375px;height:375px;">
         
-          <p class="lead text-center mb-5">
+          <p class="lead text-center col-md-7 col-md-offset-5">
               I study <strong>Electrical and Computer Engineering</strong> at <strong>Carnegie Mellon University</strong>. As a rising 3rd year, I am still exploring future interests in systems and parallel computing, I currently enjoy working on autonomous motion planning and 3D perception. <br> <br>
               
               In my free time, I enjoy designing mini, sustainable ecosystems in glass containers as well as experiment with gardening methods. At school, I love playing basketball and badminton as ways to socialize, stay fit, and destress.
@@ -95,7 +95,7 @@
         <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-robot"></i>
-            <a class="btn btn-circle js-scroll-trigger" href="#systems"></a>
+            <a class="btn btn-circle js-scroll-trigger" href="#projects"></a>
           </span>
           <h3>
             <strong>Engineering Projects</strong>
@@ -134,7 +134,7 @@
   </section>
 
   <!-- Portfolio -->
-  <section class="content-section" id="robotics">
+  <section class="content-section" id="projects">
     <div class="container">
       <div class="content-section-heading text-center">
         <h3 class="text-secondary mb-0">Portfolio</h3>
@@ -142,7 +142,7 @@
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#robo_airhockey">
+          <a class="portfolio-item js-scroll-trigger" href="#robo_airhockey">
             <span class="caption">
               <span class="caption-content">
                 <h1>Robot Airhockey</h1>
@@ -153,7 +153,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#auton_drone">
+          <a class="portfolio-item js-scroll-trigger" href="#auton_drone">
             <span class="caption">
               <span class="caption-content">
                 <h1>Drone Localization with April Tags</h1>
@@ -164,7 +164,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item js-scroll-trigger" href="#">
             <span class="caption">
               <span class="caption-content">
                 <h1>Tartan UAV</h1>
@@ -175,7 +175,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item js-scroll-trigger" href="#">
             <span class="caption">
               <span class="caption-content">
                 <h1>Carnegie Mellon Solar Racing</h1>
@@ -186,7 +186,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
+            <a class="portfolio-item js-scroll-trigger" href="#">
               <span class="caption">
                 <span class="caption-content">
                   <h1>CubeRover</h1>
@@ -197,7 +197,7 @@
             </a>
           </div>
           <div class="col-lg-6">
-              <a class="portfolio-item" href="#">
+              <a class="portfolio-item js-scroll-trigger" href="#">
                 <span class="caption">
                   <span class="caption-content">
                     <h1>Hagrid's Wild Ride</h1>
@@ -216,7 +216,7 @@
   <section class="callout"  id="systems">
       <div class="container text-center">
         <h2 class="mx-auto mb-5">
-          
+          Robot Airhockey
         </h2>
         <div class="row">
             <p class="lead mb-5">
@@ -247,19 +247,53 @@
           </div>
           <span class="caption">
               <span class="caption-content">
-                  <h2 class="text-secondary mb-0">Motive</h2>
+                  <h2 class="text-secondary mb-0">Motive <br></h2>
               </span>
             </span>
         <div class="row">
-          <p class="lead mb-5"> 
-            <a href="http://www.build18.org/garage/project/430/" 
-              target="_blank">
-              <img src="img/robo_airhockey_front.jpg" alt="robot airhockey front" style="float:left;width:778px;height:280px;">
-            </a>
-              Build18 is an awesome week-long hackathon organized by Our team's main goals for this project were to gain experience in 
-              designing and integrating a large, complex system while exploring
-              cool topics such as trajectory planning and computer vision.
-            </p>
+            <div class="col-md-8">
+                <a href="http://www.build18.org/garage/project/430/" 
+                target="_blank">
+                <img src="img/robo_airhockey_front.jpg" alt="robot airhockey front" style="float:left;width:100%;height:77%;">
+              </a>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <p class="lead mb-5">
+
+                    For CMU's weeklong hackathon, Build18, our team built a vision-guided, robotic airhockey arm. Hoping to avoid the typical human v.s single arm that has been done before, we instead imagined up a self-learning system with two collaborating arms that adjusts from its mistakes.
+      
+                    Given only a week, we set the basic system as our first milestone. We split up tasks into subteams based on interests.
+                  </p>
+            </div>
+        </div>
+        
+      </div>
+      <div class="container">
+          <h2 class="text-secondary mb-0">Responsibilities<br></h2>
+      <div class="row">
+          <div class="col-lg-4"> 
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active"  
+                id="hockey_list_motion_list" data-toggle="list" href="#hockey_list_motion" role="tab" aria-controls="home">Arm Trajectory Planning</a>
+
+              <a class="list-group-item list-group-item-action" id="hockey_list_ROS_list" data-toggle="list" href="#hockey_list_ROS" role="tab" aria-controls="profile">System Integration</a>
+
+              <a class="list-group-item list-group-item-action" id="hockey_list_motor_list" data-toggle="list" href="#hockey_list_motor" role="tab" aria-controls="messages">Motor Controls</a>
+
+              <a class="list-group-item list-group-item-action" id="hockey_list_mech_list" data-toggle="list" href="#hockey_list_mech" role="tab" aria-controls="settings">Mechanical Arm Design</a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="hockey_list_motion" role="tabpanel" aria-labelledby="hockey_list_motion_list">Motion Planning</div>
+
+              <div class="tab-pane fade" id="hockey_list_ROS" role="tabpanel" aria-labelledby="hockey_list_ROS_list">ROS</div>
+
+              <div class="tab-pane fade" id="hockey_list_motor" role="tabpanel" aria-labelledby="hockey_list_motor_list">motors</div>
+
+              <div class="tab-pane fade" id="hockey_list_mech" role="tabpanel" aria-labelledby="hockey_list_mech_list">mechanical</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
