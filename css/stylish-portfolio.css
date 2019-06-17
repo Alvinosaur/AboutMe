@@ -67,6 +67,17 @@ h6 {
   border-color: #1D809F;
 }
 
+.list-group-item2 .list-group-item {
+  background-color: white;
+  border-color: black;
+  
+}
+
+.list-group-item2.active {
+  background-color: black;
+  border-color: black;
+}
+
 /* Map */
 .map {
   height: 30rem;
