@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Imports -->
 <head>
 
   <meta charset="utf-8">
@@ -17,9 +18,12 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="tauv_icon/demo-files/demo.css"> -->
+  <link rel="stylesheet" href="tauv_icon/style.css">
 
 </head>
 
@@ -55,7 +59,6 @@
         </form>
     </div>
   </nav>
-  
 
   <!-- Intro -->
   <header class="masthead d-flex">
@@ -98,8 +101,7 @@
           </span>
           <h3><strong>Engineering Projects</strong></h3>
           <p class="lead mb-5">
-            Drone Localization, Robotic Air Hockey 
-            <br>Tartan UAV, CMU Solar Racing
+            Robotics, Machine Learning, Embedded, Full Stack
           </p>
         </div>
 
@@ -142,18 +144,6 @@
       <div class="row no-gutters">
 
         <div class="col-lg-6">
-          <a class="portfolio-item js-scroll-trigger" href="#robo_airhockey">
-            <span class="caption">
-              <span class="caption-content">
-                <h1>Robot Air Hockey</h1>
-                <p class="mb-0">2019 Build18 Hackathon</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/robo_airhockey_main.jpg" alt="">
-          </a>
-        </div>
-
-        <div class="col-lg-6">
           <a class="portfolio-item js-scroll-trigger" href="#auton_drone">
             <span class="caption">
               <span class="caption-content">
@@ -166,7 +156,19 @@
         </div>
 
         <div class="col-lg-6">
-          <a class="portfolio-item js-scroll-trigger" href="#">
+          <a class="portfolio-item js-scroll-trigger" href="#robo_airhockey">
+            <span class="caption">
+              <span class="caption-content">
+                <h1>Robot Air Hockey</h1>
+                <p class="mb-0">2019 Build18 Hackathon</p>
+              </span>
+            </span>
+            <img class="img-fluid" src="img/robo_airhockey_main.jpg" alt="">
+          </a>
+        </div>
+
+        <div class="col-lg-6">
+          <a class="portfolio-item js-scroll-trigger" href="#tartan_auv">
             <span class="caption">
               <span class="caption-content">
                 <h1>Tartan UAV</h1>
@@ -178,7 +180,7 @@
         </div>
 
         <div class="col-lg-6">
-          <a class="portfolio-item js-scroll-trigger" href="#">
+          <a class="portfolio-item js-scroll-trigger" href="#cmsr">
             <span class="caption">
               <span class="caption-content">
                 <h1>Carnegie Mellon Solar Racing</h1>
@@ -190,7 +192,7 @@
         </div>
 
         <div class="col-lg-6">
-            <a class="portfolio-item js-scroll-trigger" href="#">
+            <a class="portfolio-item js-scroll-trigger" href="#cuberover">
               <span class="caption">
                 <span class="caption-content">
                   <h1>CubeRover</h1>
@@ -202,7 +204,8 @@
           </div>
 
           <div class="col-lg-6">
-            <a class="portfolio-item js-scroll-trigger" href="#">
+            <a class="portfolio-item js-scroll-trigger" 
+              href="#hagrids_wild_rid">
               <span class="caption">
                 <span class="caption-content">
                   <h1>Hagrid's Wild Ride</h1>
@@ -216,188 +219,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- Robo Air Hockey-->
-  <section class="content-section bg-light text-center" id="robo_airhockey">
-    <div class="container">
-        <div class="content-section-heading">
-            <h2 class="mb-5">Robotic Air Hockey</h2>
-        </div>
-        <span class="caption">
-            <span class="caption-content">
-                <h2 class="text-secondary mb-0">Summary</h2>
-                <br>
-            </span>
-          </span>
-          <div class="row">
-              <div class="col-md-12">
-                  <p class="lead mb-5 text-center">
-                      <strong>My Awesome Team Members: </strong>
-                      <br>
-                      <strong>Hojun Byun: </strong> Mechanical, Motion Planning
-                      <br>
-                      <strong>Joseph Chang: </strong> Mechanical, Electrical
-                      <br>
-                      <strong>Venkata Thallam: </strong>Computer Vision, Motion Planning
-                      <br>
-                      <strong>Yang Yue: </strong>Computer Vision
-                      <br>
-                      <strong>Kevin Wang: </strong>Computer Vision
-                    </p>
-              </div>
-          </div>
-      <div class="row">
-          <div class="col-md-8">
-              <a href="http://www.build18.org/garage/project/430/" 
-              target="_blank">
-              <img src="img/robo_airhockey_front.jpg" alt="robot airhockey front" style="float:left;width:100%;height:77%;">
-            </a>
-          </div>
-          <div class="col-md-4 col-md-offset-1">
-              <p class="lead mb-5">
-
-                  For CMU's weeklong hackathon, Build18, our team built a vision-guided, robotic airhockey arm. Hoping to avoid the typical human v.s single arm that has been done before, we instead imagined up a self-learning system with two collaborating arms that adjusts from its mistakes.
-    
-                  Given only a week, we set the basic system as our first milestone.
-                </p>
-          </div>
-      </div>
-      
-      <div class="container">
-          <span class="caption">
-              <span class="caption-content">
-                  <h2 class="text-secondary mb-0">System at a Glance</h2>
-                  <br>
-              </span>
-            </span>
-        <div class="row">
-            <div class="col-md-12">
-                <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
-                target="_blank">
-                <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:50%;height:100%;position:relative">
-              </a>
-            </div>
-        </div>
-        <br>
-      
-    </div>
-    <div class="container">
-      <h2 class="text-secondary mb-0">My Contributions<br></h2>
-      <div class="row">
-        <div class="col-lg-4"> 
-          <div class="list-group list-group-mine" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active"  
-              id="hockey_list_motion_list" data-toggle="list" href="#hockey_list_motion" role="tab" aria-controls="home">Arm Trajectory Planning</a>
-
-            <a class="list-group-item list-group-item-action" id="hockey_list_ROS_list" data-toggle="list" href="#hockey_list_ROS" role="tab" aria-controls="profile">System Integration</a>
-
-            <a class="list-group-item list-group-item-action" id="hockey_list_motor_list" data-toggle="list" href="#hockey_list_motor" role="tab" aria-controls="messages">Motor Controls</a>
-
-            <a class="list-group-item list-group-item-action" id="hockey_list_mech_list" data-toggle="list" href="#hockey_list_mech" role="tab" aria-controls="settings">Mechanical Arm Design</a>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="hockey_list_motion"  
-              role="tabpanel" aria-labelledby="hockey_list_motion_list">
-              <div class="box">
-                  <div class="col-md-6">
-                    <video width="100%" height="100%" 
-                      poster="img/airhockey_arm_sim_thumbnail.png" controls>
-                        <source src="vid/airhockey_arm_sim.webm" type="video/webm">
-                        Your browser does not support HTML5 video.
-                      </video>
-                  </div>
-                  <div class="col-md-6 col-md-offset-1">
-                      <p class="lead text-center">
-                          Rather use existing packages, I decided to calculate the equations for arm movement from scratch using physics and matrices. The hardest part was to calculate the desired rotation of the two arm joints to drive the end effector's motion. We wrote all
-                          
-                          <strong><u><a href="https://github.com/Alvinosaur/robotic_air_hockey/blob/master/robotic_airhockey_ws/src/airhockey_main/scripts/motion_planning.py" 
-                            target="_blank">
-                            code with enough modularity
-                          </a></u></strong>
-                          
-                          to run on both the main system and in simulators(shown on the right) without any changes.
-
-                          Checkout 
-                          <strong><u><a href="https://drive.google.com/open?id=1NyOokdIVH08vEB-65xFrBBEeS_Z02ErS" 
-                          target="_blank">
-                            details of the calculations!
-                          </a></u></strong>
-                          
-                      </p>
-                  </div>
-                </div> 
-            </div>
-
-            <div class="tab-pane fade" id="hockey_list_ROS" role="tabpanel" aria-labelledby="hockey_list_ROS_list">
-                <div class="box">
-                    <div class="col-md-6">
-                        <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
-                        target="_blank">
-                        <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
-                      </a>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <p class="lead text-center">
-                            One of my main objectives was to learn Robot Operating System (ROS), which simplifies communication of data between difference processes. ROS simplified communication of our custom messages between the brain of our system, a Raspberry Pi, and the arm controller, an Arduino. We also created ROS services to calibrate the computer vision to any puck color in any lighting condition.
-                        </p>
-                    </div>
-                  </div> 
-
-            </div>
-
-            <div class="tab-pane fade" id="hockey_list_motor" role="tabpanel" aria-labelledby="hockey_list_motor_list">
-                <div class="box">
-                    <div class="col-md-6">
-                        <video width="100%" height="100%" controls>
-                            <source src="vid/airhockey_arm_motor.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                          </video>
-                      </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <p class="lead text-center">
-              We used stepper motors for their accurate position-tracking and high torque. Modifying an existing API(AccelStepper), we were able to have the motor accelerate to the end position and only after begin to decelerate. 
-                        </p>
-                    </div>
-                  </div> 
-
-            </div>
-
-            <div class="tab-pane fade" id="hockey_list_mech" role="tabpanel" aria-labelledby="hockey_list_mech_list">
-                <div class="box">
-                    <div class="col-md-6">
-                        <a href="https://drive.google.com/open?id=1A7ml0SJOJwCzXaMQCN_GvNPSp2Vxyl5D" 
-                        target="_blank">
-                        <img src="img/airhockey_arm.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
-                      </a>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <p class="lead text-center">
-                            We designed a belt driver to control the two joints of our 2-Degree of Freedom arm. Initially, one would think to directly connect the motors to each of the arm's joints. The mass of the motor on the 2nd joint, however, would create high inertia and slow down the arm. With the 2nd motor attached to the base and controlling the 2nd joint with a lightweight belt.
-                        </p>
-                    </div>
-                  </div> 
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <footer class="footer text-center" style="padding:0;">
-          <ul class="list-inline mb-5">
-            <li class="list-inline-item">
-              <a class="social-link rounded-circle text-white" href="https://github.com/Alvinosaur/robotic_air_hockey" target="_blank">
-                <i class="icon-social-github"></i>
-              </a>
-              <p class="lead">Code</p>
-            </li>
-          </ul>
-      </footer>
-    </div>
-  </section>
-
 
 <!-- Drone Localization with April Tags-->
   <section class="content-section bg-primary text-center text-white"
@@ -423,13 +244,14 @@
           </div>
           <div class="col-md-4 col-md-offset-1">
               <p class="lead mb-5 text-white">
-                To dive into my passion for high-level planning for robotics and gain experience with ROS, I developed an autonomous target-search drone under the mentorship of Professor George Kantor. Given only a semester with tough classes, I focused on tracking the drone's position using artificial markers called April Tags. I implemented a Kalman Filter to smooth out noisy position data. The video on the left shows how my Kalman Filter filters out the noisy position data(green) and produces smooth data(red).
+                To learn ROS and transformation matrices, I developed an autonomous target-search drone under the mentorship of Professor George Kantor this spring 2019 semester. I implemented a Kalman Filter to smooth out noisy position data from April Tag based localization.
 
-                <br>
+                <br><br>
                 Currently, I am focusing on the target detection and motion planning given depth information from the Intel Realsense.
               </p>
           </div>
       </div>
+      <br>
       
       <div class="container">
           <span class="caption">
@@ -485,12 +307,619 @@
                   </div>
                   <div class="col-md-6 col-md-offset-1">
                       <p class="lead text-center">
-                          Robots need to track their pose(position and orientation) to safely interact with their environment. I realized early on that my drone would lose access to GPS indoors, and as a result needed to find a temporary solution. I decided to use 
+                          Robots need to track their pose(position and orientation) to safely interact with their environment. I realized early on that my drone would lose access to GPS indoors, and decided to use 
                           
-                          <strong><u><a href="https://april.eecs.umich.edu/software/apriltag" style="color:white" target="_blank">April Tags</a></u></strong> to provide good localization. Of course, these can't be used in large, uncontrolled environments since people would need to place these everywhere, but this served as a good baseline to work from. This also required camera calibration, 
+                          <strong><u><a href="https://april.eecs.umich.edu/software/apriltag" style="color:white" target="_blank">April Tags</a></u></strong> to provide pose for testing. The video on the left shows noisy position data(green) and the smoothed out data(red). This also required camera calibration, 
                           
                           <strong><u><a href="https://drive.google.com/file/d/1R7c12NFLePy0XM5CmDKShIo0M1oXBqHQ/view?usp=sharing" style="color:white" target="_blank">
                             demonstrated here.</a></u></strong>
+                          
+                      </p>
+                  </div>
+                </div> 
+            </div>
+
+            <div class="tab-pane fade" id="auton_drone_KF" role="tabpanel" aria-labelledby="auton_drone_KF_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <a href="https://docs.google.com/presentation/d/10y7jlBncQirZ9Aj2SFLbZxR_tQAqJgetlkBMzg3wiac/edit?usp=sharing" 
+                        target="_blank">
+                        <img src="img/auton_drone_KF.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                            As my drone lost and regained view of tags, its estimated pose would spike with noise. I learned and implemented the Kalman Filter to smooth this out.
+                            <br>
+                            Position can be calculated from sensors or knowledge of previous position. The Kalman Filter can weigh these two based on two parameters. High Process Noise places less trust in previous knowledge, and high Meassurement Noise places less trust in sensor measurements.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+            <div class="tab-pane fade" id="auton_drone_detect" role="tabpanel" aria-labelledby="auton_drone_detect_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <video width="100%" height="100%" controls>
+                            <source src="">
+                            Your browser does not support HTML5 video.
+                          </video>
+                      </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+              I am currently working on the object detection. I will start with the challenge of finding an object based on color, shape and size and determining its distance using the Intel Realsense's depth imaging. I want to develop some UI that allows a user to take multiple images of an object, which will be enough for the machine learning to find the target.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+            <div class="tab-pane fade" id="auton_drone_motion" role="tabpanel" aria-labelledby="auton_drone_motion_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/open?id=1A7ml0SJOJwCzXaMQCN_GvNPSp2Vxyl5D" 
+                        target="_blank">
+                        <img src="" alt="" style="width:100%;height:100%;position:relative">
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                            Waypoint generation involves creating list of places for the robot to visit sequentially and possibly at a specific time. In order for the drone to interact with a target once it is detected, the drone has to move to the target. Here, I will include dynamic obstacle avoidance and possibly begin looking into mapping to be able to plot the target's location on a small map.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="footer text-center" style="padding:0;">
+          <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+              <a class="social-link rounded-circle" href="https://github.com/Alvinosaur/autonomous_drone_project" target="_blank" 
+              style="background-color:white">
+                <i class="icon-social-github"></i>
+              </a>
+              <p class="lead">Code</p>
+            </li>
+          </ul>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Robo Air Hockey-->
+  <section class="content-section bg-light text-center" id="robo_airhockey">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mb-5">Robotic Air Hockey</h2>
+        </div>
+        <span class="caption">
+            <span class="caption-content">
+                <h2 class="text-secondary mb-0">Summary</h2>
+                <br>
+            </span>
+          </span>
+          <div class="row">
+              <div class="col-md-12">
+                  <p class="lead mb-5 text-center">
+                      <strong>My Awesome Team Members: </strong>
+                      <br>
+                      <strong>Hojun Byun: </strong> Mechanical, Motion Planning
+                      <br>
+                      <strong>Joseph Chang: </strong> Mechanical, Electrical
+                      <br>
+                      <strong>Venkata Thallam: </strong>Computer Vision, Motion Planning
+                      <br>
+                      <strong>Yang Yue: </strong>Computer Vision
+                      <br>
+                      <strong>Kevin Wang: </strong>Computer Vision
+                    </p>
+              </div>
+          </div>
+      <div class="row">
+          <div class="col-md-8">
+              <a href="http://www.build18.org/garage/project/430/" 
+              target="_blank">
+              <img src="img/robo_airhockey_front.jpg" alt="robot airhockey front" style="float:left;width:100%;height:77%;">
+            </a>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+              <p class="lead mb-5">
+
+                  For CMU's weeklong hackathon, Build18, our team built a vision-guided, robotic airhockey arm. Hoping to avoid the typical human v.s single arm that has been done before, we instead imagined up a self-learning system with two collaborating arms that adjusts from its mistakes.
+    
+                  Given only a week, we set the basic system as our first milestone. Our robot would track the hockey puck's position and velocity using computer vision and determine the necessary arm movements to handle this.
+                </p>
+          </div>
+      </div>
+      
+      <div class="container">
+          <span class="caption">
+              <span class="caption-content">
+                  <h2 class="text-secondary mb-0">System at a Glance</h2>
+                  <br>
+              </span>
+            </span>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
+                target="_blank">
+                <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:50%;height:100%;position:relative">
+              </a>
+            </div>
+        </div>
+        <br>
+      
+    </div>
+    <div class="container">
+      <h2 class="text-secondary mb-0">My Contributions<br></h2>
+      <div class="row">
+        <div class="col-lg-4"> 
+          <div class="list-group list-group-mine" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active"  
+              id="hockey_list_motion_list" data-toggle="list" href="#hockey_list_motion" role="tab" aria-controls="home">Arm Trajectory Planning</a>
+
+            <a class="list-group-item list-group-item-action"  
+            id="hockey_list_comp_vis" data-toggle="list" href="#hockey_comp_vis" role="tab" aria-controls="home">Computer Vision</a>
+
+            <a class="list-group-item list-group-item-action" id="hockey_list_ROS_list" data-toggle="list" href="#hockey_list_ROS" role="tab" aria-controls="profile">System Integration</a>
+
+            <a class="list-group-item list-group-item-action" id="hockey_list_motor_list" data-toggle="list" href="#hockey_list_motor" role="tab" aria-controls="messages">Motor Controls</a>
+
+            <a class="list-group-item list-group-item-action" id="hockey_list_mech_list" data-toggle="list" href="#hockey_list_mech" role="tab" aria-controls="settings">Mechanical Arm Design</a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="hockey_list_motion"  
+              role="tabpanel" aria-labelledby="hockey_list_motion_list">
+              <div class="box">
+                  <div class="col-md-6">
+                    <video width="100%" height="100%" 
+                      poster="img/airhockey_arm_sim_thumbnail.png" controls>
+                        <source src="vid/airhockey_arm_sim.webm" type="video/webm">
+                        Your browser does not support HTML5 video.
+                      </video>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                      <p class="lead text-center">
+                          Rather use existing packages, I decided to calculate the equations for arm movement from scratch using physics and matrices. The hardest part was to calculate the desired rotation of the two arm joints to drive the end effector's motion. We wrote all
+
+                          <strong><u><a href="https://github.com/Alvinosaur/robotic_air_hockey/blob/master/robotic_airhockey_ws/src/airhockey_main/scripts/motion_planning.py" 
+                            target="_blank">
+                            code with enough modularity
+                          </a></u></strong>
+                          
+                          to run on both the main system and in simulators(shown on the right) without any changes.
+
+                          Checkout 
+                          <strong><u><a href="https://drive.google.com/open?id=1NyOokdIVH08vEB-65xFrBBEeS_Z02ErS" 
+                          target="_blank">
+                            details of the calculations!
+                          </a></u></strong>
+                          
+                      </p>
+                  </div>
+                </div> 
+            </div>
+
+            <div class="tab-pane fade" id="hockey_comp_vis" 
+            role="tabpanel" aria-labelledby="hockey_list_comp_vis">
+              <div class="box">
+                  <div class="col-md-6">
+                      <a href="" 
+                      target="_blank">
+                      <img src="" alt="" style="width:100%;height:100%;position:relative">
+                    </a>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                      <p class="lead text-center">
+                          We use computer vision with OpenCV to detect and track the hockey puck and arms. I have made a GUI that guides a user in filtering out objects through HSV.
+                          <br><br>
+
+                          To convert pixels to physical distance, I used OpenCV's chessboard corner detection, finding the distance between corners and measuring this with a ruler.
+                          <br><br>
+
+                          To deal with false detections (predicting the puck would be a some position but suddenly seeing it jump somewhere else), I added a Kalman filter as well as a basic filter of the expected dimensions of contours detected for the puck.
+                      </p>
+                  </div>
+                </div> 
+            </div>
+
+            <div class="tab-pane fade" id="hockey_list_ROS" role="tabpanel" aria-labelledby="hockey_list_ROS_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
+                        target="_blank">
+                        <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                            One of my main objectives was to learn Robot Operating System (ROS), which simplifies communication of data between difference processes. We used ROS to tie all our subsytems together and communicate between an Arduino and a Raspeberry Pi.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+            <div class="tab-pane fade" id="hockey_list_motor" role="tabpanel" aria-labelledby="hockey_list_motor_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <video width="100%" height="100%" controls>
+                            <source src="vid/airhockey_arm_motor.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                          </video>
+                      </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+              We used stepper motors for their accurate position-tracking and high torque. Modifying an existing API(AccelStepper), we were able to have the motor accelerate to the end position to reach a certain velocity and hit the puck at the right time.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+            <div class="tab-pane fade" id="hockey_list_mech" role="tabpanel" aria-labelledby="hockey_list_mech_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/open?id=1A7ml0SJOJwCzXaMQCN_GvNPSp2Vxyl5D" 
+                        target="_blank">
+                        <img src="img/airhockey_arm.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                            We designed a belt driver to control the two joints of our 2-Degree of Freedom arm. Initially, one would think to directly connect the motors to each of the arm's joints. The mass of the motor on the 2nd joint, however, would create high inertia and slow down the arm. With the 2nd motor attached to the base and controlling the 2nd joint with a lightweight belt.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="footer text-center" style="padding:0;">
+          <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+              <a class="social-link rounded-circle text-white" href="https://github.com/Alvinosaur/robotic_air_hockey" target="_blank">
+                <i class="icon-social-github"></i>
+              </a>
+              <p class="lead">Code</p>
+            </li>
+          </ul>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Tartan AUV -->
+  <section class="content-section bg-primary text-center text-white"
+    id="tartan_auv">
+    <div class="container">
+        <div class="content-section-heading">
+          <h2 class="mb-5">
+            Tartan AUV
+          </h2>
+        </div>
+        <span class="caption">
+          <span class="caption-content">
+              <h2 class="text-secondary mb-0">Summary</h2>
+              <br>
+          </span>
+        </span>
+      <div class="row">
+          <div class="col-md-8">
+            <a href="https://tartanauv.com/" target="_blank">
+              <img src="img/tauv_main.jpg" 
+              style="width:90%;height:100%;position:relative">
+            </a>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+              <p class="lead mb-5 text-white">
+                Tartan AUV is CMU's first ever robosub team, founded only last year. I joined this(2019) summer and have been training an existing learning model to detect underwater targets in real time. Given that the detection occurs underwater, I have researched some interesting ways to manipulate images to capture the color distortion from refractions in the water.
+              </p>
+          </div>
+      </div>
+      
+      <!-- <div class="container">
+          <span class="caption">
+              <span class="caption-content">
+                  <h2 class="text-secondary mb-0">System at a Glance</h2>
+                  <br>
+              </span>
+            </span>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="" 
+                target="_blank">
+                <img src="" style="width:100%;height:100%;position:relative">
+              </a>
+            </div>
+        </div>
+        <br> -->
+      
+    </div>
+    <div class="container">
+      <h2 class="text-secondary mb-0 "><br>My Contributions<br></h2>
+      <div class="row">
+        <div class="col-lg-4"> 
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active"  
+              id="auton_drone_local_list" data-toggle="list" href="#auton_drone_local" role="tab" aria-controls="home">
+              Target Detection with YOLO
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="auton_drone_local"  
+              role="tabpanel" aria-labelledby="auton_drone_local_list">
+              <div class="box">
+                  <div class="col-md-6">
+                    <video width="100%" height="100%" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                      <p class="lead text-center">
+                          I am currently training an open source neural network 
+                          with the images of targets for our competition, which include colored markers.
+                      </p>
+                  </div>
+                </div> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="footer" style="padding:0;">
+          <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+              <a class="social-link rounded-circle" 
+                href="https://tartanauv.com/" target="_blank" 
+              style="background-color:white">
+              <span class="icon-tauv">
+                  <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span>
+                  </span>
+              </a>
+            </li>
+            <p class="lead">Team Website</p>
+          </ul>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Carnegie Mellon Solar Racing-->
+  <section class="content-section bg-light text-center" id="cmsr">
+      <div class="container">
+          <div class="content-section-heading">
+              <h2 class="mb-5">Carnegie Mellon Solar Racing (CMSR)</h2>
+          </div>
+          <span class="caption">
+              <span class="caption-content">
+                  <h2 class="text-secondary mb-0">Summary</h2>
+                  <br>
+              </span>
+          </span>
+          <div class="row">
+              <div class="col-md-8">
+                <a href="https://thebridge.cmu.edu/organization/carnegie-mellon-solar-racing" target="_blank">
+                  <img src="img/cmsr_front.jpg" 
+                  style="width:75%;height:75%;position:relative">
+                </a>
+              </div>
+              <div class="col-md-4 col-md-offset-1">
+                  <p class="lead mb-5">
+  
+                      CMSR participates in the annual Solar Splash, a solar boat racing competition of speed and endurance. I joined as a freshman and served as leader of the Optimization Team this 2018-2019 year, which oversees collection and display of boat status data. We also oversee communication of data back to shore for the team to analyze and strategize. 
+
+                      <br><br>
+  
+                      This year, we developed new features: 
+                      <br>1. Estimate charge: Coulomb Counting
+                      <br>2. LORa-based remote telemetry
+                      <br>3. Clean and improved app for the drive
+                  </p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <span class="caption">
+                <span class="caption-content">
+                    <h2 class="text-secondary mb-0">System at a Glance</h2>
+                    <br>
+                </span>
+              </span>
+          <div class="row">
+              <div class="col-md-12">
+                  <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
+                  target="_blank">
+                  <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:50%;height:100%;position:relative">
+                </a>
+              </div>
+          </div>
+          <br>
+        
+      </div>
+      <div class="container">
+        <h2 class="text-secondary mb-0">My Contributions<br></h2>
+        <div class="row">
+          <div class="col-lg-4"> 
+            <div class="list-group list-group-mine" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active"  
+                id="hockey_list_motion_list" data-toggle="list" href="#cmsr_charge_est" role="tab" aria-controls="home">Accurate Battery Charge Estimation</a>
+  
+              <a class="list-group-item list-group-item-action" id="hockey_list_ROS_list" data-toggle="list" href="#cmsr_telemetry" role="tab" aria-controls="profile">Remote Telemetry with Google Maps Integration</a>
+  
+              <a class="list-group-item list-group-item-action" id="hockey_list_motor_list" data-toggle="list" href="#cmsr_app" role="tab" aria-controls="messages">Improved App Dashboard</a>
+  
+              <a class="list-group-item list-group-item-action" id="hockey_list_mech_list" data-toggle="list" href="#cmsr_stereo_vis" role="tab" aria-controls="settings">Stereo Vision-based Tracking of Opponents</a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="cmsr_charge_est"  
+                role="tabpanel" aria-labelledby="hockey_list_motion_list">
+                <div class="box">
+                    <div class="col-md-6">
+                      <video width="100%" height="100%" controls>
+                          <source src="" type="video/webm">
+                          Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+
+                            
+                        </p>
+                    </div>
+                  </div> 
+              </div>
+  
+              <div class="tab-pane fade" id="cmsr_telemetry" role="tabpanel" aria-labelledby="hockey_list_ROS_list">
+                  <div class="box">
+                      <div class="col-md-6">
+                          <a href="" 
+                          target="_blank">
+                          <img src="" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-md-offset-1">
+                          <p class="lead text-center">
+
+                          </p>
+                      </div>
+                    </div> 
+  
+              </div>
+  
+              <div class="tab-pane fade" id="cmsr_app" role="tabpanel" aria-labelledby="hockey_list_motor_list">
+                  <div class="box">
+                      <div class="col-md-6">
+                          <video width="100%" height="100%" controls>
+                              <source src="" type="video/mp4">
+                              Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                      <div class="col-md-6 col-md-offset-1">
+                          <p class="lead text-center">
+                          </p>
+                      </div>
+                    </div> 
+  
+              </div>
+  
+              <div class="tab-pane fade" id="cmsr_stereo_vis" role="tabpanel" aria-labelledby="hockey_list_mech_list">
+                  <div class="box">
+                      <div class="col-md-6">
+                          <a href="https://drive.google.com/open?id=1A7ml0SJOJwCzXaMQCN_GvNPSp2Vxyl5D" 
+                          target="_blank">
+                          <img src="img/airhockey_arm.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                        </a>
+                      </div>
+                      <div class="col-md-6 col-md-offset-1">
+                          <p class="lead text-center">
+                              We designed a belt driver to control the two joints of our 2-Degree of Freedom arm. Initially, one would think to directly connect the motors to each of the arm's joints. The mass of the motor on the 2nd joint, however, would create high inertia and slow down the arm. With the 2nd motor attached to the base and controlling the 2nd joint with a lightweight belt.
+                          </p>
+                      </div>
+                    </div> 
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <footer class="footer text-center" style="padding:0;">
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="https://github.com/Alvinosaur/robotic_air_hockey" target="_blank">
+                  <i class="icon-social-github"></i>
+                </a>
+                <p class="lead">Code</p>
+              </li>
+            </ul>
+        </footer>
+      </div>
+    </section>
+
+  <!-- CubeRover -->
+  <section class="content-section bg-primary text-center text-white"
+    id="tartan_auv">
+    <div class="container">
+        <div class="content-section-heading">
+          <h2 class="mb-5">
+            CubeRover
+          </h2>
+        </div>
+        <span class="caption">
+          <span class="caption-content">
+              <h2 class="text-secondary mb-0">Summary</h2>
+              <br>
+          </span>
+        </span>
+      <div class="row">
+          <div class="col-md-8">
+            <a href="https://docs.google.com/document/d/1B7QWhN9nI1RYf5bYi5PxhLE97GVRJ1fRQATuZui9rR4/edit?usp=sharing">
+              <img src="img/cuberover_cover.png" style="width:640px;height:400px;position:relative">
+            </a>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+              <p class="lead mb-5 text-white">
+                While CubeRover is a company focused on space exploration, our class project is dedicated to assisting them.
+
+                <br>
+                My role was to implement a system monitor able to detect problems in different modules. This involved Embedded Systems in programming the TI MSP430 micro-controller. Taking on such a role proved a sharp learning curve as I had no knowledge of how registers of low-level devices were controlled. Especially setting system flags, handling interrupts for a clock. Overall, I implemented SPI communication and a basic method of detecting error by having the MSP430 analyze "heartbeats" composed of bytes making up a special message. The monitor would compare these recorded bytes to the message it expected.
+              </p>
+          </div>
+      </div>
+      
+      <div class="container">
+          <span class="caption">
+              <span class="caption-content">
+                  <h2 class="text-secondary mb-0">System at a Glance</h2>
+                  <br>
+              </span>
+            </span>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="" 
+                target="_blank">
+                <img src="" style="width:100%;height:100%;position:relative">
+              </a>
+            </div>
+        </div>
+        <br>
+      
+    </div>
+    <div class="container">
+      <h2 class="text-secondary mb-0">My Contributions<br></h2>
+      <div class="row">
+        <div class="col-lg-4"> 
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active"  
+              id="auton_drone_local_list" data-toggle="list" href="#auton_drone_local" role="tab" aria-controls="home">
+              Target Detection with YOLO
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="auton_drone_local"  
+              role="tabpanel" aria-labelledby="auton_drone_local_list">
+              <div class="box">
+                  <div class="col-md-6">
+                    <video width="100%" height="100%" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                      </video>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                      <p class="lead text-center">
+                          In Progress.
                           
                       </p>
                   </div>
@@ -568,36 +997,6 @@
       </footer>
     </div>
   </section>
-    
-
-    <section class="content-section bg-light text-center" id="auton_drone">
-        <div class="container">
-            <div class="content-section-heading">
-                <h2 class="mb-5">Autonomous Drone Project</h2>
-              </div>
-          <div class="row">
-              <p class="lead mb-5">
-                  While I am still exploring future interests in systems and parallel computing, I currently enjoy working on autonomous motion planning and 3D perception. In my free time, I enjoy designing mini, sustainable ecosystems in glass containers as well as experiment with gardening methods. At school, I love playing basketball and badminton as ways to socialize, stay fit, and destress.
-              </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section bg-light text-center" 
-        id="Mind-Controlled Drone">
-          <div class="container">
-              <div class="content-section-heading">
-                  <h2 class="mb-5">Mind-Controlled Drone</h2>
-                </div>
-            <div class="row">
-                <p class="lead mb-5">
-                    While I am still exploring future interests in systems and parallel computing, I currently enjoy working on autonomous motion planning and 3D perception. In my free time, I enjoy designing mini, sustainable ecosystems in glass containers as well as experiment with gardening methods. At school, I love playing basketball and badminton as ways to socialize, stay fit, and destress.
-                </p>
-            </div>
-          </div>
-        </section>
-
-
 
   <!-- Call to Action -->
   <section class="content-section bg-primary text-white">
