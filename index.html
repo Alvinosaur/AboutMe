@@ -393,7 +393,7 @@
   <section class="content-section bg-light text-center" id="robo_airhockey">
     <div class="container">
         <div class="content-section-heading">
-            <h2 class="mb-5">Robotic Air Hockey</h2>
+            <h2 class="mb-5">Robot Air Hockey</h2>
         </div>
         <span class="caption">
             <span class="caption-content">
@@ -706,13 +706,13 @@
               </span>
           </span>
           <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-7">
                 <a href="https://thebridge.cmu.edu/organization/carnegie-mellon-solar-racing" target="_blank">
                   <img src="img/cmsr_front.jpg" 
                   style="width:75%;height:75%;position:relative">
                 </a>
               </div>
-              <div class="col-md-4 col-md-offset-1">
+              <div class="col-md-5 col-md-offset-1">
                   <p class="lead mb-5">
   
                       CMSR participates in the annual Solar Splash, a solar boat racing competition of speed and endurance. I joined as a freshman and served as leader of the Optimization Team this 2018-2019 year, which oversees collection and display of boat status data. We also oversee communication of data back to shore for the team to analyze and strategize. 
@@ -736,10 +736,7 @@
               </span>
           <div class="row">
               <div class="col-md-12">
-                  <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
-                  target="_blank">
-                  <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:50%;height:100%;position:relative">
-                </a>
+                  <img src="img/cmsr_system.jpg" alt="robot airhockey front" style="width:75%;height:100%;position:relative">
               </div>
           </div>
           <br>
@@ -862,17 +859,22 @@
           </span>
         </span>
       <div class="row">
-          <div class="col-md-8">
-            <a href="https://docs.google.com/document/d/1B7QWhN9nI1RYf5bYi5PxhLE97GVRJ1fRQATuZui9rR4/edit?usp=sharing">
+          <div class="col-md-7">
+            <a href="https://docs.google.com/document/d/1B7QWhN9nI1RYf5bYi5PxhLE97GVRJ1fRQATuZui9rR4/edit?usp=sharing"
+            target="_blank">
               <img src="img/cuberover_cover.png" style="width:640px;height:400px;position:relative">
             </a>
           </div>
-          <div class="col-md-4 col-md-offset-1">
+          <div class="col-md-5 col-md-offset-1">
               <p class="lead mb-5 text-white">
-                While CubeRover is a company focused on space exploration, our class project is dedicated to assisting them.
-
-                <br>
-                My role was to implement a system monitor able to detect problems in different modules. This involved Embedded Systems in programming the TI MSP430 micro-controller. Taking on such a role proved a sharp learning curve as I had no knowledge of how registers of low-level devices were controlled. Especially setting system flags, handling interrupts for a clock. Overall, I implemented SPI communication and a basic method of detecting error by having the MSP430 analyze "heartbeats" composed of bytes making up a special message. The monitor would compare these recorded bytes to the message it expected.
+                I first explored embedded systems programming through a class partnered with the space exploration startup, Astrobotic. In space, the sun can emit radiation strong enough to flip bits in data and thus corrupt our entire robot. In the worse case, this can cut all our communications with the robot and end the mission.
+                
+                <br><br>
+                As a backup for this situation,I created a "watchdog" to detect this system failure and automatically reset the robot to hopefully revive communications. I used the 
+                
+                <strong><u><a href="http://www.ti.com/tool/MSP-EXP430FR5994" style="color:white" target="_blank">MSP430</a></u></strong>
+                
+                as an SPI slave to read heartbeat-like signals and detect anomalies from the robot's main modules.
               </p>
           </div>
       </div>
@@ -886,117 +888,98 @@
             </span>
         <div class="row">
             <div class="col-md-12">
-                <a href="" 
-                target="_blank">
-                <img src="" style="width:100%;height:100%;position:relative">
-              </a>
+              <img src="img/cuberover_system.jpg" style="width:50%;height:100%;position:relative">
             </div>
         </div>
         <br>
-      
     </div>
+    
     <div class="container">
-      <h2 class="text-secondary mb-0">My Contributions<br></h2>
-      <div class="row">
-        <div class="col-lg-4"> 
-          <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active"  
-              id="auton_drone_local_list" data-toggle="list" href="#auton_drone_local" role="tab" aria-controls="home">
-              Target Detection with YOLO
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="auton_drone_local"  
-              role="tabpanel" aria-labelledby="auton_drone_local_list">
-              <div class="box">
-                  <div class="col-md-6">
-                    <video width="100%" height="100%" controls>
-                        <source src="" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                      </video>
-                  </div>
-                  <div class="col-md-6 col-md-offset-1">
-                      <p class="lead text-center">
-                          In Progress.
-                          
-                      </p>
-                  </div>
-                </div> 
-            </div>
-
-            <div class="tab-pane fade" id="auton_drone_KF" role="tabpanel" aria-labelledby="auton_drone_KF_list">
-                <div class="box">
-                    <div class="col-md-6">
-                        <a href="https://docs.google.com/presentation/d/10y7jlBncQirZ9Aj2SFLbZxR_tQAqJgetlkBMzg3wiac/edit?usp=sharing" 
-                        target="_blank">
-                        <img src="img/auton_drone_KF.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
-                      </a>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <p class="lead text-center">
-                            I learned and implemented the Kalman Filter to smooth out noisy spikes in position as the drone's camera detected and lost tags. The Kalman Filter is amazing for its ability to "learn" complicated interactions and physics models, such as predicted velocity from only position data. The filter has two main parameters, process and measurement noise. 
-                            <br>
-                            When determining motion, we can calculate position from sensors or April Tags in this case, or use previous knowledge to predict a new position.
-                            High Process Noise means we believe our predictions are noisy and shouldn't be trusted as much.
-                            High Meassurement Noise means the sensors are noisy and we shouldn't rely on their measurements as much.
-                        </p>
-                    </div>
-                  </div> 
-
-            </div>
-
-            <div class="tab-pane fade" id="auton_drone_detect" role="tabpanel" aria-labelledby="auton_drone_detect_list">
-                <div class="box">
-                    <div class="col-md-6">
-                        <video width="100%" height="100%" controls>
-                            <source src="">
-                            Your browser does not support HTML5 video.
-                          </video>
-                      </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <p class="lead text-center">
-              I am currently working on the object detection. I will start with the challenge of finding an object based on color, shape and size and determining its distance using the Intel Realsense's depth imaging. I want to develop some UI that allows a user to take multiple images of an object, which will be enough for the machine learning to find the target.
-                        </p>
-                    </div>
-                  </div> 
-
-            </div>
-
-            <div class="tab-pane fade" id="auton_drone_motion" role="tabpanel" aria-labelledby="auton_drone_motion_list">
-                <div class="box">
-                    <div class="col-md-6">
-                        <a href="https://drive.google.com/open?id=1A7ml0SJOJwCzXaMQCN_GvNPSp2Vxyl5D" 
-                        target="_blank">
-                        <img src="img/airhockey_arm.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
-                      </a>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <p class="lead text-center">
-                            Waypoint generation involves creating list of places for the robot to visit sequentially and possibly at a specific time. In order for the drone to interact with a target once it is detected, the drone has to move to the target. Here, I will include dynamic obstacle avoidance and possibly begin looking into mapping to be able to plot the target's location on a small map.
-                        </p>
-                    </div>
-                  </div> 
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <footer class="footer text-center" style="padding:0;">
-          <ul class="list-inline mb-5">
-            <li class="list-inline-item">
-              <a class="social-link rounded-circle" href="https://github.com/Alvinosaur/autonomous_drone_project" target="_blank" 
-              style="background-color:white">
-                <i class="icon-social-github"></i>
+        <h2 class="text-secondary mb-0">My Contributions<br></h2>
+        <div class="row">
+          <div class="col-lg-4"> 
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active"  
+                id="cuberover_embedded_list" data-toggle="list" href="#cuberover_embedded" role="tab" aria-controls="home">
+                Learning Embedded Systems
               </a>
-              <p class="lead">Code</p>
-            </li>
-          </ul>
-      </footer>
-    </div>
-  </section>
+  
+              <a class="list-group-item list-group-item-action" id="cuberover_spi_list" data-toggle="list" href="#cuberover_spi" role="tab" aria-controls="profile">
+                Serial Peripheral Interface (SPI)
+              </a>
+  
+              <a class="list-group-item list-group-item-action" id="cuberover_anomaly_list" data-toggle="list" href="#cuberover_anomaly" role="tab" aria-controls="messages">
+                  Anomaly Detection
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="cuberover_embedded"  
+                role="tabpanel" aria-labelledby="cuberover_embedded_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <img src="img/cuberover_embedded.png" style="width:100%;height:100%;position:relative">
+                    </div>
+                    
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                          Normally in programming, I expect to see exactly where a  variable will be used. When changing status registers to control the MSP430, however, I struggled with the concept of changing a global variable that didn't seem to be used anywhere. I was able to better understand after reading block diagrams of these registers in circuits. Overall, I needed to change the functionality of pins on the MSP430 and choose which internal clock to use.
+                            
+                        </p>
+                    </div>
+                </div>
+              </div>
+  
+              <div class="tab-pane fade" id="cuberover_spi" role="tabpanel" aria-labelledby="cuberover_spi_list">
+                  <div class="box">
+                      <div class="col-md-6">
+                          <img src="img/cuberover_spi.jpg" style="width:100%;height:100%;position:relative">
+                      </div>
+                      
+                      <div class="col-md-6 col-md-offset-1">
+                          <p class="lead text-center">
+                            SPI is a form of synchronous communication, meaning its message bits are aligned with an clock. As my first taste of embedded systems, I struggled with the concept of changing status register bits to control functionality of the chip. I also gained experience reading extensive documentation of software and hardware.
+                              
+                          </p>
+                      </div>
+                  </div>
+  
+              </div>
+  
+              <div class="tab-pane fade" id="cuberover_anomaly" role="tabpanel" aria-labelledby="cuberover_anomaly_list">
+                  <div class="box">
+                      <div class="col-md-6">
+                          <video width="100%" height="100%" controls>
+                              <source src="">
+                              Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                      <div class="col-md-6 col-md-offset-1">
+                          <p class="lead text-center">
+                I am currently working on the object detection. I will start with the challenge of finding an object based on color, shape and size and determining its distance using the Intel Realsense's depth imaging. I want to develop some UI that allows a user to take multiple images of an object, which will be enough for the machine learning to find the target.
+                          </p>
+                      </div>
+                    </div> 
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <footer class="footer text-center" style="padding:0;">
+            <ul class="list-inline mb-5">
+              <li class="list-inline-item">
+                <a class="social-link rounded-circle" href="https://github.com/Alvinosaur/autonomous_drone_project" target="_blank" 
+                style="background-color:white">
+                  <i class="fas fa-file-alt"></i>
+                </a>
+                <p class="lead">Docs</p>
+              </li>
+            </ul>
+        </footer>
+      </div>
+</section>
 
   <!-- Call to Action -->
   <section class="content-section bg-primary text-white">
