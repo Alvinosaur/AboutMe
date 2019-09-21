@@ -51,7 +51,7 @@
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a>
+            <a class="nav-link js-scroll-trigger" href="#contact_me">Contact Me</a>
         </li>
       </ul>
         <form class="form-inline">
@@ -207,7 +207,7 @@
 
           <div class="col-lg-6">
             <a class="portfolio-item js-scroll-trigger" 
-              href="#hagrids_wild_rid">
+              href="#hagrids_wild_ride">
               <span class="caption">
                 <span class="caption-content">
                   <h1>Hagrid's Wild Ride</h1>
@@ -846,7 +846,7 @@
 
   <!-- CubeRover -->
   <section class="content-section bg-primary text-center text-white"
-    id="tartan_auv">
+    id="cuberover">
     <div class="container">
         <div class="content-section-heading">
           <h2 class="mb-5">
@@ -982,9 +982,204 @@
       </div>
 </section>
 
-  <!-- Call to Action -->
+  <!-- Hagrid's Wild Ride -->
+  <section class="content-section bg-light text-center" id="hagrids_wild_ride">
+    <div class="container">
+        <div class="content-section-heading">
+            <h2 class="mb-5">Hagrid's Wild Ride: Interactive VR Flight Simulator</h2>
+        </div>
+        <span class="caption">
+            <span class="caption-content">
+                <h2 class="text-secondary mb-0">Summary</h2>
+                <br>
+            </span>
+          </span>
+          <div class="row">
+              <div class="col-md-12">
+                  <p class="lead mb-5 text-center">
+                      <strong>My Awesome Team Members: </strong>
+                      <br>
+                      <strong>Tom Scherlis: </strong> Mechanical, Game Development
+                      <br>
+                      <strong>Advaith Sethuraman: </strong> Mechanical, Electrical, Game Development
+                      <br>
+                      <strong>(Holmes) Yue Wu: </strong>Game Development
+                  </p>
+              </div>
+          </div>
+      <div class="row">
+          <div class="col-md-8">
+              <a href="http://www.build18.org/garage/project/430/" 
+              target="_blank">
+              <img src="img/robo_airhockey_front.jpg" alt="robot airhockey front" style="float:left;width:100%;height:77%;">
+            </a>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+              <p class="lead mb-5">
+                  As freshmen in our first Build18 competition, our team created an interactive VR flight simulator with full-body, tilt-to-steer controls. While brainstorming, we realized that VR games often lacked an immersive experience, relying on button-pressing for controls rather than the player's own motion. Using a motion/tilt sensor, we were able to use the player's own tilting as input to control the character in the game and thus give the user a sensation of really flying.
+                </p>
+          </div>
+      </div>
+      
+      <div class="container">
+          <span class="caption">
+              <span class="caption-content">
+                  <h2 class="text-secondary mb-0">System at a Glance</h2>
+                  <br>
+              </span>
+            </span>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
+                target="_blank">
+                <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:50%;height:100%;position:relative">
+              </a>
+            </div>
+        </div>
+        <br>
+      
+    </div>
+    <div class="container">
+      <h2 class="text-secondary mb-0">My Contributions<br></h2>
+      <div class="row">
+        <div class="col-lg-4"> 
+          <div class="list-group list-group-mine" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active"  
+              id="hockey_list_motion_list" data-toggle="list" href="#hockey_list_motion" role="tab" aria-controls="home">Mechanical Design of Rig</a>
 
-<section class="content-section bg-primary text-white">
+            <a class="list-group-item list-group-item-action"  
+            id="hockey_list_comp_vis" data-toggle="list" href="#hockey_comp_vis" role="tab" aria-controls="home">Character Animation</a>
+
+            <a class="list-group-item list-group-item-action" id="hockey_list_ROS_list" data-toggle="list" href="#hockey_list_ROS" role="tab" aria-controls="profile">Game Development</a>
+
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="hockey_list_motion"  
+              role="tabpanel" aria-labelledby="hockey_list_motion_list">
+              <div class="box">
+                  <div class="col-md-6">
+                    <video width="100%" height="100%" 
+                      poster="img/airhockey_arm_sim_thumbnail.png" controls>
+                        <source src="vid/airhockey_arm_sim.webm" type="video/webm">
+                        Your browser does not support HTML5 video.
+                      </video>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                      <p class="lead text-center">
+                          To address this, we built a spring-loaded rig, similar to child's ride at a local park. Using an IMU connected to the chair of the rig, the game would receive live feedback on the user's tilting angle, and this would serve as control input for the user's flight in the game.
+
+                          <strong><u><a href="https://github.com/Alvinosaur/robotic_air_hockey/blob/master/robotic_airhockey_ws/src/airhockey_main/scripts/motion_planning.py" 
+                            target="_blank">
+                            code with enough modularity
+                          </a></u></strong>
+                          
+                          to run on both the main system and in simulators(shown on the right) without any changes.
+
+                          Checkout 
+                          <strong><u><a href="https://drive.google.com/open?id=1NyOokdIVH08vEB-65xFrBBEeS_Z02ErS" 
+                          target="_blank">
+                            details of the calculations!
+                          </a></u></strong>
+                          
+                      </p>
+                  </div>
+                </div> 
+            </div>
+
+            <div class="tab-pane fade" id="hockey_comp_vis" 
+            role="tabpanel" aria-labelledby="hockey_list_comp_vis">
+              <div class="box">
+                  <div class="col-md-6">
+                      <a href="" 
+                      target="_blank">
+                      <img src="" alt="" style="width:100%;height:100%;position:relative">
+                    </a>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                      <p class="lead text-center">
+                          We use computer vision with OpenCV to detect and track the hockey puck and arms. I have made a GUI that guides a user in filtering out objects through HSV.
+                          <br><br>
+
+                          To convert pixels to physical distance, I used OpenCV's chessboard corner detection, finding the distance between corners and measuring this with a ruler.
+                          <br><br>
+
+                          To deal with false detections (predicting the puck would be a some position but suddenly seeing it jump somewhere else), I added a Kalman filter as well as a basic filter of the expected dimensions of contours detected for the puck.
+                      </p>
+                  </div>
+                </div> 
+            </div>
+
+            <div class="tab-pane fade" id="hockey_list_ROS" role="tabpanel" aria-labelledby="hockey_list_ROS_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing" 
+                        target="_blank">
+                        <img src="img/airhockey_overview.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                            One of my main objectives was to learn Robot Operating System (ROS), which simplifies communication of data between difference processes. We used ROS to tie all our subsytems together and communicate between an Arduino and a Raspeberry Pi.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+            <div class="tab-pane fade" id="hockey_list_motor" role="tabpanel" aria-labelledby="hockey_list_motor_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <video width="100%" height="100%" controls>
+                            <source src="vid/airhockey_arm_motor.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                          </video>
+                      </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+              We used stepper motors for their accurate position-tracking and high torque. Modifying an existing API(AccelStepper), we were able to have the motor accelerate to the end position to reach a certain velocity and hit the puck at the right time.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+            <div class="tab-pane fade" id="hockey_list_mech" role="tabpanel" aria-labelledby="hockey_list_mech_list">
+                <div class="box">
+                    <div class="col-md-6">
+                        <a href="https://drive.google.com/open?id=1A7ml0SJOJwCzXaMQCN_GvNPSp2Vxyl5D" 
+                        target="_blank">
+                        <img src="img/airhockey_arm.jpg" alt="robot airhockey front" style="width:100%;height:100%;position:relative">
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p class="lead text-center">
+                            We designed a belt driver to control the two joints of our 2-Degree of Freedom arm. Initially, one would think to directly connect the motors to each of the arm's joints. The mass of the motor on the 2nd joint, however, would create high inertia and slow down the arm. With the 2nd motor attached to the base and controlling the 2nd joint with a lightweight belt.
+                        </p>
+                    </div>
+                  </div> 
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="footer text-center" style="padding:0;">
+          <ul class="list-inline mb-5">
+            <li class="list-inline-item">
+              <a class="social-link rounded-circle text-white" href="https://github.com/Alvinosaur/robotic_air_hockey" target="_blank">
+                <i class="icon-social-github"></i>
+              </a>
+              <p class="lead">Code</p>
+            </li>
+          </ul>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+<section class="content-section bg-primary text-white" id="contact_me">
   <div class="container text-center">
       <div class="row justify-content-center align-items-center">
           <div class="form-group" id="form_container">
@@ -1026,19 +1221,25 @@
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
-      <ul class="list-inline mb-5">
+      <ul class="list-inline mb-12">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/alvin.shek.1" target="_blank">
             <i class="icon-social-facebook"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-twitter"></i>
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/shek_alvin" target="_blank">
+            <i class="fab fa-instagram"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/alvinshek/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://github.com/Alvinosaur" target="_blank">
             <i class="icon-social-github"></i>
           </a>
         </li>
