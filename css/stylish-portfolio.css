@@ -78,6 +78,18 @@ h6 {
   
 }
 
+.search_res {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.search_res > p {
+  text-indent: 25px;
+  color: grey;
+}
+
 .list-group-item2.active {
   background-color: black;
   border-color: black;

@@ -3,8 +3,9 @@
 function searchProjects(words, projects) {
     var priority1 = [];
     var priority2 = [];
-
     $.each( projects, function( proj_key, entries ) {
+        if (entries["title"] == undefined ||
+            entries["keywords"] == undefined) return;
         var title = entries["title"].toLowerCase();
         var keywords = entries["keywords"];
         var found_match = false;
@@ -59,8 +60,10 @@ function searchProjects(words, projects) {
                 keywords[ki] = highlightQuery(keywords[ki], word);
             }
         }
-        var div = document.getElementById(proj_key);
-        var link = $("#" + proj_key).children()[0].href;
+        console.log(proj_key + "_search");
+        var div = document.getElementById(proj_key + "_search");
+        // var link = $("#" + proj_key).children()[0].href;
+        var link = "#" + proj_key;
         div.innerHTML = `
             <a id='link' href=${link}> ${title} </a>
             <p>${keywords.join(", ")}</p>`;
@@ -80,15 +83,26 @@ function highlightQuery(text, query, is_title=false) {
 $(document).ready(function(){
     var projects;
     var synch = false;
-    $.getJSON( 'https://alvinosaur.github.io/AboutMe/js/projects.json', function( data ) {
-        projects = data;
-        synch = true;
+    // $.get( , function( data ) {
+    //     projects = data;
+    //     synch = true;
+    // });
+
+    $.ajax({
+        type: 'GET',
+        url: 'https://alvinosaur.github.io/AboutMe/js/projects.json',
+        async: false,
+        dataType: 'json',
+        success: function (data) {
+            projects = data;
+            synch = true;
+        }
     });
     
 
     // after each keypress
     if (synch) {
-        console.log(projects);
+        // console.log(projects);
         $(".form-control").keyup(function(event) {
             var entry = $(this).val();
             console.log("Typed: " + entry);

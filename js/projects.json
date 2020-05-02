@@ -1,5 +1,5 @@
 {
-    "drone_localization": {
+    "auton_drone": {
         "keywords": [
             "drone",
             "localization",
@@ -30,7 +30,7 @@
             "uncertainty"
         ]
     },
-    "solar_racing": {
+    "cmsr": {
         "title": "Carnegie Mellon Solar Racing",
         "keywords": [
             "solar",
@@ -43,7 +43,7 @@
         ]
     },
     "hagrids_wild_ride": {},
-    "cube_rover": {
+    "cuberover": {
         "title": "CubeRover",
         "keywords": [
             "cuberover",
@@ -58,7 +58,7 @@
     },
     "assured_autonomy": {},
     "drone_controls": {},
-    "robot_air_hockey": {
+    "robo_airhockey": {
         "title": "Robot Air Hockey",
         "keywords": [
             "robotics",
@@ -69,8 +69,8 @@
             "arm"
         ]
     },
-    "tartan_uav": {
-        "title": "Tartan UAV",
+    "tartan_auv": {
+        "title": "Tartan AUV",
         "keywords": [
             "autonomous",
             "sub",
