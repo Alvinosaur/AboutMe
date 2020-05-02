@@ -79,19 +79,24 @@ function highlightQuery(text, query, is_title=false) {
 
 $(document).ready(function(){
     var projects;
+    var synch = false;
     $.getJSON( 'https://alvinosaur.github.io/AboutMe/js/projects.json', function( data ) {
         projects = data;
+        synch = true;
     });
-    console.log(projects);
+    
 
     // after each keypress
-    $(".form-control").keyup(function(event) {
-        var entry = $(this).val();
-        console.log("Typed: " + entry);
-        // filter out any whitespace
-        var words = entry.split(/(\s+)/).filter(
-            function(e) { return e.trim().length > 0; } );
+    if (synch) {
+        console.log(projects);
+        $(".form-control").keyup(function(event) {
+            var entry = $(this).val();
+            console.log("Typed: " + entry);
+            // filter out any whitespace
+            var words = entry.split(/(\s+)/).filter(
+                function(e) { return e.trim().length > 0; } );
 
-        searchProjects(words, projects);
-    });
+            searchProjects(words, projects);
+        });
+    }
 });
