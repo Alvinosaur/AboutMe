@@ -1,0 +1,81 @@
+{
+    "drone_localization": {
+        "keywords": [
+            "drone",
+            "localization",
+            "kantor",
+            "george",
+            "research",
+            "april",
+            "tag",
+            "kalman",
+            "filter",
+            "KF",
+            "image",
+            "camera",
+            "robotics"
+        ],
+        "title": "Drone Localization with April Tags"
+    },
+    "planning_uncertainty": {
+        "title": "Simulator-driven Robotic Arm Planning",
+        "keywords": [
+            "simulator",
+            "deep learning",
+            "machine learning",
+            "robotics",
+            "arm",
+            "manipulator",
+            "planning",
+            "uncertainty"
+        ]
+    },
+    "solar_racing": {
+        "title": "Carnegie Mellon Solar Racing",
+        "keywords": [
+            "solar",
+            "racing",
+            "android",
+            "app",
+            "sensor",
+            "carnegie mellon",
+            "battery charge estimation"
+        ]
+    },
+    "hagrids_wild_ride": {},
+    "cube_rover": {
+        "title": "CubeRover",
+        "keywords": [
+            "cuberover",
+            "cube rover",
+            "embedded systems",
+            "watchdog",
+            "spi",
+            "msp430",
+            "anomaly detection",
+            "anomalies"
+        ]
+    },
+    "assured_autonomy": {},
+    "drone_controls": {},
+    "robot_air_hockey": {
+        "title": "Robot Air Hockey",
+        "keywords": [
+            "robotics",
+            "air hockey",
+            "airhockey",
+            "hackathon",
+            "build18",
+            "arm"
+        ]
+    },
+    "tartan_uav": {
+        "title": "Tartan UAV",
+        "keywords": [
+            "autonomous",
+            "sub",
+            "submarine",
+            "competition"
+        ]
+    }
+}
