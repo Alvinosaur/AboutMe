@@ -1,0 +1,3 @@
+[submodule "photorama"]
+	path = photorama
+	url = git@github.com:Alvinosaur/photorama.git
