@@ -10,7 +10,7 @@
   <meta name="description" content="Personal Website">
   <meta name="author" content="Alvin Shek">
 
-  <title>Meta-learning in Robotic Reach Task</title>
+  <title>Exploring Meta-Learning for Robots</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,8 +27,8 @@
   <link href="../../css/stylish-portfolio.css" rel="stylesheet">
   <link rel="icon" href="../../main_icon.svg">
   <link rel="apple-touch-icon" href="../../main_icon.svg">
-  <link rel="canonical" href="https://alvinosaur.github.io/AboutMe/projects/meta-learning">
-  <link rel="alternate" hreflang="en-us" href="https://alvinosaur.github.io/AboutMe/projects/meta-learning">
+  <link rel="canonical" href="https://alvinosaur.github.io/AboutMe/projects/idl_project">
+  <link rel="alternate" hreflang="en-us" href="https://alvinosaur.github.io/AboutMe/projects/idl_project">
 
   <link rel="stylesheet" href="../../css/project/custom_project.css">
 
@@ -104,7 +104,7 @@
   </script>
 
   <meta property="og:site_name" content="Alvin Shek">
-  <meta property="og:url" content="https://alvinosaur.github.io/AboutMe/projects/meta-learning">
+  <meta property="og:url" content="https://alvinosaur.github.io/AboutMe/projects/idl_project">
   <meta property="og:title" content="Meta-Learning for Reach Task">
   <meta property="og:description"
     content="In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)">
@@ -123,7 +123,7 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alvinosaur.github.io/AboutMe/projects/meta-learning"
+    "@id": "https://alvinosaur.github.io/AboutMe/projects/idl_project"
   },
   "headline": "Meta-Learning for Reach Task",
   
@@ -151,7 +151,7 @@
 }
 </script>
 
-  <title>Meta-learning in Robotic Reach Task</title>
+  <title>Exploring Meta-Learning for Robots</title>
 
 </head>
 
@@ -190,7 +190,7 @@
     <article class="article article-project">
 
       <div class="article-container pt-3">
-        <h1>Meta-learning in Robotic Reach Task</h1>
+        <h1>Exploring Meta-Learning for Robots</h1>
 
         <div class="article-metadata">
 
@@ -229,7 +229,7 @@
       <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
         style="max-width: 720px; max-height: 369px;">
         <div style="position: relative">
-          <img src="main.png" alt="" class="featured-image">
+          <img src="trained_maml.gif" alt="" class="featured-image">
           <span class="article-header-caption">Task: Reach Red Target</span>
         </div>
       </div>
@@ -242,15 +242,14 @@
               - <a href="https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html" target="_blank"
                 rel="noopener">Project
                 Gallery</a></em></p>
+
+          <h3>Intro</h3>
+
           <p>Reinforcement learning (RL) is a powerful learning technique that enables agents to learn useful
-            policies
-            by interacting directly with the environment. While this training approach doesn’t require
-            labeled
-            data, it
-            is plagued with convergence issues and is highly sample inefficient. The learned policies are
-            often
-            very
-            specific to the task at hand and are not generalizable to similar task spaces.</p>
+            policies by interacting directly with the environment. While this training approach doesn’t require
+            labeled data, it is plagued with convergence issues and is highly
+            sample inefficient. The learned policies are often
+            very specific to the task at hand and are not generalizable to similar task spaces.</p>
           <p>Meta-Reinforcement Learning is one strategy that can mitigate these issues, enabling robots to
             acquire new
             skills much more quickly. Often described as “learning how to learn”, it allows agents to
@@ -277,7 +276,8 @@
               rel="noopener">RLBench</a> have been proposed that establish a common ground for a fair
             comparison between
             approaches. In this work, we aim to utilize the task variety proposed by <a
-              href="https://arxiv.org/abs/1910.10897" target="_blank" rel="noopener">Meta-World</a> and
+              href="https://arxiv.org/abs/1910.10897" target="_blank" rel="noopener">Meta-World</a>
+            and
             compare PPO, a
             vanilla policy gradient algorithm, with their Meta Learning counterparts (MAML and Reptile). The
             objective
@@ -291,9 +291,104 @@
             the
             shortcomings of both these Meta-Learning techniques, with some computational implementation
             suggestions that
-            prevent slowdown.</p>
+            prevent slowdown.
+          </p>
+        </div>
+
+        <h3>Results</h3>
+
+        <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
+          style="max-width: 720px; max-height: 369px;">
+          <div style="position: relative">
+            <img src="results_plots.png" alt="" class="featured-image">
+            <!-- <span class="article-header-caption"></span> -->
+          </div>
+        </div>
+
+        <div class="article-style">
+          <p>
+            The figure above compares the success rate of each model averaged
+            over the 10 test tasks after initial training on other tasks. MAML and
+            Reptile both converge to 80% success rate within 100 iterations, whereas Multi-headed Reptile and
+            random-initialized (Vanilla PPO) require 150 and 225 iterations
+            respectively.
+          </p>
+          <p>
+            As theorized, both MAML and Reptile converge significantly more quickly than Vanilla PPO.
+            Interestingly, even in the first iteration, these two meta-learning techniques achieve around 40%
+            success rate, demonstrating their learned behaviour about the nature of the task distribution.
+          </p>
+          <p>
+            However, we found that Multi-headed Reptile does not work as well as we expected, performing just
+            as well as Vanilla PPO. Although Multi-headed Reptile converged in fewer iterations than Vanilla
+            PPO, its poor initial performance indicates that it failed to initialize weights optimally. As a sanity
+            check, Vanilla PPO indeed has poor initial performance due to randomly initialized weights.
+          </p>
+
+          <h3>Tools</h3>
+          <ul>
+            <li><a href="https://github.com/stepjam/RLBench" target="_blank" rel="noopener">RLBench</a> provided the
+              baseline robot environment that we built upon.</li>
+            <li><a href="https://github.com/DLR-RM/stable-baselines3" target="_blank"
+                rel="noopener">Stablebaselines3</a> provided the vanilla PPO algorithm.
+            </li>
+            <li>
+              <a href="https://docs.ray.io/en/master/ray-overview/index.html#parallelizing-python-java-functions-with-ray-tasks"
+                target="_blank" rel="noopener">Ray</a>
+              provided an easy solution to creating multiple, independent
+              simulation workers to train different copies of the model on
+              different tasks.
+            </li>
+            <li>
+              <a href="https://wandb.ai/site" target="_blank" rel="noopener">Wandb</a>
+              was critical to help us manage different training runs and keep
+              track of experiments.
+            </li>
+          </ul>
+
+          <h3>Contribution</h3>
+
+          <p>
+            I first built much of the initial training and evaluation pipeline,
+            eventually getting PPO to train properly on the reach task. Due to
+            the robotic application, I had to restrict the magnitude of the
+            agent's output actions to be physically feasible.
+
+            <a href="https://github.com/stepjam/RLBench/issues/52#issuecomment-754757967" target="_blank"
+              rel="noopener">See this Git issue for more details.</a>
+            Without this,
+            many of the agents' actions would trigger errors in the simulator's
+            inverse kinematics solver, and initial training would be extremely
+            slow.
+          </p>
+
+          <p>
+            I next wrote much of MAML and Reptile.
+            <a href="https://github.com/Team-Grasp/idl-project/blob/reptile/maml.py" target="_blank" rel="noopener">See
+              here for our implementation.</a>
+            I also helped
+            modify our architecture to utilize Ray for parallelization over
+            independent tasks, as in the case of Multi-headed Reptile.
+            <a href="https://github.com/Team-Grasp/idl-project/blob/f269fadcfa2275ca9cb9429dd5f6f293ca184960/run_maml.py#L92"
+              target="_blank" rel="noopener">See here for hyperparameters.</a>
+          </p>
 
         </div>
+
+        <h3>Thoughts</h3>
+        <p>
+          Meta-learning certainly shows much promise, as indicated by the
+          initial high success rate of MAML and Reptile. However, I'd like to
+          see these algorithms' performance on more complicated tasks besides
+          the basic reach task. These results unfortunately were achieved with a
+          strong reward signal (Euclidean distance of End-effector (EE) from target),
+          and since action space was delta EE position, the model in effect only
+          had to learn the vector from current position to target. I wonder how
+          use of a sparse reward would change performance. For robots to solve
+          any general task in households or factories, rewards should not need
+          to be hand-designed.
+
+        </p>
 
         <div class="media author-card content-widget-hr">
 
