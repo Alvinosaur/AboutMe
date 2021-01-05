@@ -1,0 +1,21 @@
+{
+    "name": "Deval Shah",
+    "short_name": "Deval Shah",
+    "lang": "en-us",
+    "theme_color": "hsl(267°, 95%, 76%)",
+    "background_color": "hsl(267°, 95%, 76%)",
+    "icons": [
+        {
+            "src": "/deval-maker.github.io/images/icon_huf6405452ecdf9a3ed7bcc3909ec454c4_8517_192x192_fill_lanczos_center_2.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/deval-maker.github.io/images/icon_huf6405452ecdf9a3ed7bcc3909ec454c4_8517_512x512_fill_lanczos_center_2.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone",
+    "start_url": "/deval-maker.github.io/?utm_source=web_app_manifest"
+}
