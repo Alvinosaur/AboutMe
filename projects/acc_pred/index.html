@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Imports -->
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Website">
+  <meta name="author" content="Alvin Shek">
+
+  <title>Attention-based Accident Prediction</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
+  <link href="../../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../css/project/wowchemy.min.css">
+  <link rel="manifest" href="../../index.webmanifest">
+  <link href="../../css/stylish-portfolio.css" rel="stylesheet">
+  <link rel="icon" href="../../main_icon.svg">
+  <link rel="apple-touch-icon" href="../../main_icon.svg">
+  <link rel="canonical" href="https://alvinosaur.github.io/AboutMe/projects/acc_pred">
+  <link rel="alternate" hreflang="en-us" href="https://alvinosaur.github.io/AboutMe/projects/acc_pred">
+
+  <link rel="stylesheet" href="../../css/project/custom_project.css">
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!------------------------------------------------------------------------>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="theme-color" content="hsl(267°, 95%, 76%)">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css"
+    crossorigin="anonymous" title="hl-light" disabled>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css"
+    crossorigin="anonymous" title="hl-dark">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
+    integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA=="
+    crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"
+    integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg=="
+    crossorigin="anonymous" async></script>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PT7JW9WNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    function trackOutboundLink(url, target) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon',
+        'event_callback': function () {
+          if (target !== '_blank') {
+            document.location = url;
+          }
+        }
+      });
+      console.debug("Outbound link clicked: " + url);
+    }
+
+    function onClickCallback(event) {
+      if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+        return;
+      }
+      trackOutboundLink(event.target, event.target.getAttribute('target'));
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-2PT7JW9WNN', {});
+
+
+    document.addEventListener('click', onClickCallback, false);
+  </script>
+
+  <meta property="og:site_name" content="Alvin Shek">
+  <meta property="og:url" content="https://alvinosaur.github.io/AboutMe/projects/acc_pred">
+  <meta property="og:title" content="Meta-Learning for Reach Task">
+  <meta property="og:description"
+    content="In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)">
+  <meta property="og:image" content="main.png">
+  <meta property="twitter:image" content="main.png">
+  <meta property="og:locale" content="en-us">
+
+
+  <meta property="article:published_time" content="2020-01-04T00:00:00&#43;00:00">
+
+  <meta property="article:modified_time" content="2020-01-04T00:00:00&#43;00:00">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alvinosaur.github.io/AboutMe/projects/acc_pred"
+  },
+  "headline": "Meta-Learning for Reach Task",
+  
+  "image": [
+    "featured.png"
+  ],
+  
+  "datePublished": "2020-01-04T00:00:00Z",
+  "dateModified": "2020-01-04T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Alvin Shek"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Alvin Shek",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "../../main_icon.svg"
+    }
+  },
+  "description": "In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)"
+}
+</script>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="https://alvinosaur.github.io/AboutMe/#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="https://alvinosaur.github.io/AboutMe/#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger"
+            href="https://alvinosaur.github.io/AboutMe/photography/main.html">Photography</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="https://alvinosaur.github.io/AboutMe/#contact_me">Contact Me</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-body bg-light">
+    <article class="article article-project">
+
+      <div class="article-container pt-3">
+        <h1>Attention-based Accident Prediction</h1>
+
+        <div class="article-metadata">
+
+          <span class="article-date">
+
+            Dec 5, 2020
+          </span>
+
+        </div>
+
+        <div class="btn-links mb-3">
+
+          <a class="btn btn-outline-primary my-1 mr-1" href="final_report.pdf" target="_blank" rel="noopener">
+            PDF
+          </a>
+
+          <a class="btn btn-outline-primary my-1 mr-1"
+            href="https://github.com/Alvinosaur/Accident_Prediction/tree/main/Anticipating-Accidents" target="_blank"
+            rel="noopener">
+            Code
+          </a>
+
+          <a class="btn btn-outline-primary my-1 mr-1"
+            href="https://docs.google.com/presentation/d/1zrvYlDEXQlLnXh-iJp5JF7tkM7ZYzjhJAzoG3gOIBS8/edit?usp=sharing"
+            target="_blank" rel="noopener">
+            Slides
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
+        style="max-width: 720px; max-height: 369px;">
+        <div style="position: relative">
+          <img src="main.png" alt="" class="featured-image">
+          <span class="article-header-caption">High attention on black car</span>
+        </div>
+      </div>
+
+      <div class="article-container">
+
+        <div class="article-style">
+          <h3>Intro</h3>
+
+          <p>
+            In 2018, more than 4.4 million people were injured from car accidents.
+            Predicting other accidents, even a few seconds before, can help
+            drivers avoid adding to the damage.
+            For our project, we would like to predict accidents a few seconds before they occur and provide some metric
+            of
+            uncertainty on nearby drivers. This will enable drivers to perform emergency, evasive actions just as the
+            accidents
+            happen rather than seconds later. Human drivers especially may not be able to tell that accidents will
+            happen, so our
+            system will assist them.</p>
+          <p>
+            The original <a href="https://yuxng.github.io/chan_accv16.pdf" target="_blank" rel="noopener">Anticipating
+              Accidents in Dashcam Videos</a> applies
+            attention spatially across a single image, learning the weights
+            to place on each vehicle feature vector in a scene. Attention
+            locations are not determined by the prediction
+            model.
+            Rather, an
+            upstream
+            object detector detects vehicles (buses, cars, bikes, motorbikes) as well as people. It crops and feeds each
+            object into
+            a feature extractor. These features inherently represent various boxed regions in the original image, and as
+            the model
+            learns which features are important (order is important when fed in as a matrix), we can visualize this
+            attention on
+            each bounding box (main image above). The pipeline can be visualized
+            below:
+          </p>
+          <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
+            style="max-width: 720px; max-height: 369px;">
+            <div style="position: relative">
+              <img src="pipeline.png" alt="" class="featured-image">
+              <span class="article-header-caption">Full Pipeline</span>
+            </div>
+          </div>
+          <br>
+
+          <p>
+            We decided to introduce a new modification: learn attention across
+            time on the full image features. Our proposed model overall
+            still retains the original paper’s spatial object attention, but now
+            additionally learns
+            which of the previous k image frames are most important for predicting an accident in the current frame.
+            This idea drew inspiration from
+            <a href="https://arxiv.org/abs/1508.01211" target="_blank" rel="noopener">Listen, Attend, and Spell</a>,
+            whose model learns attention on audio samples across time to predict
+            text. This can be summarized by the image below:
+          </p>
+        </div>
+
+        <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
+          style="max-width: 720px; max-height: 369px;">
+          <div style="position: relative">
+            <img src="contribution.png" alt="" class="featured-image">
+            <!-- <span class="article-header-caption"></span> -->
+          </div>
+        </div>
+
+        <div class="article-style">
+          <h3>Results</h3>
+          <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
+            style="max-width: 720px; max-height: 369px;">
+            <div style="position: relative">
+              <img src="table_results.png" alt="" class="featured-image">
+              <!-- <span class="article-header-caption"></span> -->
+            </div>
+          </div>
+
+          <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
+            style="max-width: 720px; max-height: 369px;">
+            <div style="position: relative">
+              <img src="table_results.png" alt="" class="featured-image">
+              <!-- <span class="article-header-caption"></span> -->
+            </div>
+          </div>
+          As you can see above, our model has higher average precision and predicts accidents on average earlier.
+          However,
+          our
+          model needs to compute new attention values across the past K video frames, and thus takes an extra 80 seconds
+          approximately per epoch. Given a batch size of 10 videos and 128 batches in total, processing a video of 100
+          frames
+          takes approximately 0.0625 seconds longer with our model.
+
+          <div class="row">
+            <div class="column">
+              <img src="loss.png" alt="" class="featured-image" style="width: 360px;">
+            </div>
+            <div class="column">
+              <img src="prec_v_recall.png" alt="" class="featured-image" style="width: 360px;">
+            </div>
+          </div>
+
+          <p>
+            The figure on the left plots evaluation loss vs epoch. At the 18th
+            epoch, we achieved an evaluation loss of
+            1.625 compared to the baseline model’s loss of 1.66.
+          </p>
+          <p>
+            The figure on the right plots precision vs recall. One can interpret
+            this by picking a desired level of recall (example 0.8) and seeing the
+            corresponding precision. Maximizing both would be desirable. As a
+            refresher, here are the definitions of
+            precision and recall:
+          </p>
+
+          <ul>
+            <li>Precision = True Positives / Predicted Positives</li>
+            <li>Recall = True Positives / Actual Positives</li>
+          </ul>
+        </div>
+
+        <div class="article-style">
+          <h3>Tools</h3>
+          <ul>
+            <li>The original model was written in Tensorflow. For educational
+              purposes, I reimplemented this in Pytorch.</li>
+          </ul>
+
+          <h3>Contribution</h3>
+          Looking at the pipeline image, I worked on improving accident
+          prediction, while my teammates worked on improving vehicle detection.
+          <p>
+
+          </p>
+        </div>
+
+
+        <h3>Thoughts</h3>
+        <p>
+          This project was extremely rushed. For that reason, I admit that the
+          results achieved here are not indicative of the true effectiveness of
+          attention over time. Specifically, I examined the time attention plots
+          and noticed in the final epochs that all attention was placed on the
+          first timestep:
+        </p>
+        <img src="epoch29.png" alt="" class="featured-image" style="width: 400px; height: 400px">
+        In hindsight, it honestly doesn't make much sense to place attention
+        across time. In speech-to-text, audio samples should be correlated in
+        time with the text generated. The audio samples of "Hello" should
+        correspond to "H", "e", "l", "l", "o" in this exact order, where audio
+        samples of "H" should be in the beginning of a recording. However, for
+        car accident prediction, different timesteps can contain useful
+        indications of accidents. In this case, we can't learn a standard rule
+        for attention to apply on all videos. The important timesteps for
+        accident prediction depend on the scenario. I realized this while
+        writing this blog post and will keep this lesson in mind when working
+        with attention mechanisms in the future.
+
+        <div class="media author-card content-widget-hr">
+
+
+          <a href="https://alvinosaur.github.io/AboutMe"><img class="avatar mr-3 avatar-circle"
+              src="../../img/profile_pic.jpg" alt="Alvin Shek"></a>
+
+
+          <div class="media-body">
+            <h5 class="card-title"><a href="https://alvinosaur.github.io/AboutMe">Alvin Shek</a></h5>
+            <h6 class="card-subtitle">Robotics Masters Student @ CMU</h6>
+            <p class="card-text">Robotics, Computer Vision, Deep Learning, Reinforcement Learning.</p>
+            <ul class="network-icon" aria-hidden="true">
+
+              <li>
+                <a href="mailto:ashek@andrew.cmu.edu">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://github.com/Alvinosaur" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.linkedin.com/in/alvinshek/" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="../../Alvin_Shek_Resume.pdf" target="_blank" rel="noopener">
+                  <i class="far fa-address-book"></i>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <div class="project-related-pages content-widget-hr">
+
+        </div>
+      </div>
+    </article>
+  </div>
+
+
+</body>
+
+</html>
