@@ -10,7 +10,7 @@
   <meta name="description" content="Personal Website">
   <meta name="author" content="Alvin Shek">
 
-  <title>D* Lite Planning for Rough Terrain</title>
+  <title>Automated Scoring for Axe Throwing</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,8 +27,8 @@
   <link href="../../css/stylish-portfolio.css" rel="stylesheet">
   <link rel="icon" href="../../main_icon.svg">
   <link rel="apple-touch-icon" href="../../main_icon.svg">
-  <link rel="canonical" href="https://alvinosaur.github.io/AboutMe/projects/inc_planning">
-  <link rel="alternate" hreflang="en-us" href="https://alvinosaur.github.io/AboutMe/projects/inc_planning">
+  <link rel="canonical" href="https://alvinosaur.github.io/AboutMe/projects/axe_detection">
+  <link rel="alternate" hreflang="en-us" href="https://alvinosaur.github.io/AboutMe/projects/axe_detection">
 
   <link rel="stylesheet" href="../../css/project/custom_project.css">
 
@@ -38,9 +38,6 @@
   <!------------------------------------------------------------------------>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <meta name="description"
-    content="In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -60,96 +57,8 @@
     integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA=="
     crossorigin="anonymous">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"
-    integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg=="
-    crossorigin="anonymous" async></script>
-
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PT7JW9WNN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    function trackOutboundLink(url, target) {
-      gtag('event', 'click', {
-        'event_category': 'outbound',
-        'event_label': url,
-        'transport_type': 'beacon',
-        'event_callback': function () {
-          if (target !== '_blank') {
-            document.location = url;
-          }
-        }
-      });
-      console.debug("Outbound link clicked: " + url);
-    }
-
-    function onClickCallback(event) {
-      if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-        return;
-      }
-      trackOutboundLink(event.target, event.target.getAttribute('target'));
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'G-2PT7JW9WNN', {});
-
-
-    document.addEventListener('click', onClickCallback, false);
-  </script>
-
-  <meta property="og:site_name" content="Alvin Shek">
-  <meta property="og:url" content="https://alvinosaur.github.io/AboutMe/projects/inc_planning">
-  <meta property="og:title" content="Meta-Learning for Reach Task">
-  <meta property="og:description"
-    content="In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)">
-  <meta property="og:image" content="main.png">
-  <meta property="twitter:image" content="main.png">
-  <meta property="og:locale" content="en-us">
-
-
-  <meta property="article:published_time" content="2020-01-04T00:00:00&#43;00:00">
-
-  <meta property="article:modified_time" content="2020-01-04T00:00:00&#43;00:00">
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://alvinosaur.github.io/AboutMe/projects/inc_planning"
-  },
-  "headline": "Meta-Learning for Reach Task",
-  
-  "image": [
-    "featured.png"
-  ],
-  
-  "datePublished": "2020-01-04T00:00:00Z",
-  "dateModified": "2020-01-04T00:00:00Z",
-  
-  "author": {
-    "@type": "Person",
-    "name": "Alvin Shek"
-  },
-  
-  "publisher": {
-    "@type": "Organization",
-    "name": "Alvin Shek",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "../../main_icon.svg"
-    }
-  },
-  "description": "In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)"
-}
-</script>
 
 </head>
 
@@ -188,37 +97,34 @@
     <article class="article article-project">
 
       <div class="article-container pt-3">
-        <h1>D* Lite Planning for Rough Terrain</h1>
+        <h1>Automated Scoring for Axe Throwing</h1>
 
         <div class="article-metadata">
 
           <span class="article-date">
 
-            Aug 22, 2020
+            Dec 29, 2019
           </span>
 
         </div>
 
         <div class="btn-links mb-3">
 
-          <a class="btn btn-outline-primary my-1 mr-1" href="final_report.pdf" target="_blank" rel="noopener">
-            PDF
-          </a>
-
-          <a class="btn btn-outline-primary my-1 mr-1"
-            href="https://github.com/Alvinosaur/assured_autonomy_car/tree/master/search_planning_algos" target="_blank"
+          <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/Alvinosaur/Axe_Tracker" target="_blank"
             rel="noopener">
-            Code
+            README + Code
           </a>
 
           <a class="btn btn-outline-primary my-1 mr-1"
-            href="https://docs.google.com/presentation/d/1oK5kE2edsr46tJkCkrHaFJtr9lJi8KBCz8BvbhOYXzM/edit?usp=sharing"
+            href="https://docs.google.com/presentation/d/1uH9LAQfr25p53zjWGmO-NtlNtRkCWy8wm5Qc7UlbyAk/edit?usp=sharing"
             target="_blank" rel="noopener">
             Slides
           </a>
 
-          <a class="btn btn-outline-primary my-1 mr-1" href="final_results.mp4" target="_blank" rel="noopener">
-            Video
+          <a class="btn btn-outline-primary my-1 mr-1"
+            href="https://drive.google.com/drive/folders/1i-IyCfMGqFx7QGnfqr1J7kUjCxeZ2bJV?usp=sharing" target="_blank"
+            rel="noopener">
+            Dataset + Google Colab
           </a>
 
         </div>
@@ -228,8 +134,8 @@
       <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
         style="max-width: 720px; max-height: 369px;">
         <div style="position: relative">
-          <img src="main.png" alt="" class="featured-image">
-          <span class="article-header-caption"></span>
+          <img src="main.jpg" alt="" class="featured-image">
+          <!-- <span class="article-header-caption"></span> -->
         </div>
       </div>
 
@@ -240,78 +146,121 @@
           <h3>Summary</h3>
 
           <p>
-            Motion Planning for mobile robots (ie: autonomous cars) often do not
-            need to worry about the terrain: the road is reasonably paved and
-            maps are accurate. However, when applying robotics to rough terrain,
-            especially terrain that is not accurately mapped, a vehicle must be
-            more careful about where it moves. Based on sensors, it needs to
-            quickly update its prior knowledge about the surrounding terrain and
-            update motion plans in real time to avoid risky terrain. This idea
-            motivated me to study incremental search under mentorship of Dr. Qin
-            Lin. Specifically, I explored the <a href="http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf"
-              target="_blank" rel="noopener">D* Lite algorithm</a> and implemented
-            the baseline algorithm on a 2D environment with simple car
-            kinematics and not dynamics. Full details about implementation
-            (state and action space, heuristic, datastructures, etc...)
-            <a href="final_report.pdf" target="_blank" rel="noopener">can be
-              found in this document.</a>
+            I helped the Lumberjaxes axe-throwing company in Pittsburgh, PA
+            develop an automated scoring system for axe throws with mentorship
+            from Dr. George Kantor. In axe throwing, there are three rings that
+            make up a bullseye, and the deepest ring that an axe lies in
+            determines the score. Working from inside to outer ring, scores are
+            5, 3, 1, and 0 where 0 score is given if the axe does not lie in any
+            ring. Having an automated scoring system for a static
+            bullseye is not useful since people will need to pry their axe off
+            a target and can calculate the score while doing so with no extra effort. However,
+            this project is a foundation for more interesting games with moving
+            targets and multiple throws where score-keeping would grow complicated.
           </p>
+
+          <h3>Data Collection + Detection</h3>
+          <p>
+            My first step was to implement axe detection (not scoring)
+            and set up a system to take a picture whenever an axe appears on the
+            target. This serves the dual purpose of collecting images for the
+            dataset as well as detecting on the real system. Axe detection
+            was accomplished by using the SSIM algorithm, which essentially
+            <a href="https://docs.google.com/presentation/d/1Z8DYN7VcDcc7ToR8XDTzJtpuj3n0Rf8O7oLZPMprWzc/edit#slide=id.g6ff5876fa8_0_116"
+              target="_blank" rel="noopener">compares two different images based
+              on luminance, contrast, and
+              structure.</a> Then, if similarity is within some bound (different enough
+            to not be identical images, but similar enough to not be caused by
+            a person moving into view), the image is saved. With all these
+            images, I manually parsed through all the positives and negatives
+            and hand-labeled the bounding box of the axe tip for every positive
+            image. This makes up the axe dataset. Future work could include
+            negative hard mining, a CNN-based axe detector, and the inclusion of edge-case images where the
+            axe is still visible, but part of the image is occluded by a person:
+          </p>
+          <img src="edge_case.jpg" alt="" class="featured-image" style="width:300px">
+
+          <h3>Ring Detection</h3>
+          <p>
+            The next component is ring detection, which involves classical
+            copmuter vision. Each ring has a distinct color, so I tuned basic
+            RGB color filters to isolate pixels of each ring. Since filtering
+            isn't perfect, I then implemented RANSAC to extract the best fit
+            circle for each ring. As long as one ring is detected, the other
+            rings can be approximated using hard-coded offsets for radii,
+            which works since our camera is assumed to a fixed distance from the
+            target.
+            <a href="https://github.com/Alvinosaur/Axe_Tracker/tree/master/scripts_rpi/helpers" target="_blank"
+              rel="noopener">Relevant code can be found in this directory.</a>
+          </p>
+
+          <h3>Axe Scoring</h3>
+          <p>
+            I tried multiple methods for axe tip detection (Blob detection + PCA, Fully Connected
+            Network (FCN)) before finalizing on MaskRCNN, a pixel-level segmentation
+            CNN. The Blob detection would often fail due to shadows and noise in
+            the image, while precisely detecting the axe tip location with PCA
+            did not work. The FCN was a naive modification of a previous
+            homework assignment since I had no in-depth knowledge of Deep
+            Learning at the time. MaskRCNN served well to handle the
+            complexities in lighting, shadows, and size of the axes.
+          </p>
+
+          <h3>Results</h3>
+          <img src="results_comparison.jpg" alt="" class="featured-image">
+          <p>
+            The above figure compares performance between (top) MaskRCNN and (bottom) classical Blob
+            Detection + PCA. A confusion matrix plots true scores vs predicted
+            scores from the model/algorithm. Ideally, all counts or probability
+            should lie on the diagonal from top left to bottom right. This means
+            the true score matches the predicted score. The left plot is simply
+            the normalized version of the right plot, showing percentages
+            instead of counts, where each row should sum to 1. As a
+            refresher, here are the definitions of
+            precision and recall:
+          </p>
+
+          <ul>
+            <li>Precision = True Positives / Predicted Positives</li>
+            <li>Recall = True Positives / Actual Positives</li>
+          </ul>
 
           <p>
-            A full video of the planner (though still contains a bug as you can
-            see at the end) is shown below. The graph on the right displays
-            newly-expanded states (and all the actions/rollouts stemming from that
-            state). In basic maze-finding, an action is to simply move up, down,
-            left, or right. For a kinematic vehicle, however, we can use motion
-            primitives defined by velocity and steering angle to precompute
-            rollouts. Then based on the car's current position and orientation, we simply apply
-            3D transform (translation + rotation) to the predifined motion swaths.
-            Those are the colorful flower-looking shapes, each dot representing an
-            intermediary state along that path.
+            The above only has mentioned software. For hardware, I used a
+            Raspberry Pi 4 Model B since this is the only model that supports
+            Tensorflow for MaskRCNN. Average runtime for axe detection was 1.2s,
+            while axe scoring was 11s. This long runtime for scoring is
+            unacceptable since we want scoring done in a matter of 2 to 3
+            seconds, but is left as future work. <a
+              href="https://docs.google.com/document/d/14kVA9lhM9vlDu0PzWhGbjlJfr_60oSK5k4-yUz0RZ6I/edit?usp=sharing"
+              target="_blank" rel="noopener">Choice of macro lens and camera
+              can be found here.</a>
+
           </p>
 
-
-          <video width="100%" height="100%" controls>
-            <source src="final_results.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-
+          <h3>Mechanical Design</h3>
           <p>
-            Notice that initially, the planner must expand all necessary states
-            to find a path from start to goal, hence identical to A* search.
+            I designed a custom mount system with adjustable angles for the
+            camera. The below pictures show different angles of the final design
+            and orientation of the camera with respect to the bullseye target. <a
+              href="https://docs.google.com/presentation/d/1XZY_rIJcyj0cT6RWiLMSZJaU2oba6PDZcBjUC_9ZC8g/edit?usp=sharing"
+              target="_blank" rel="noopener">More pictures can be found here.
+            </a>
+            Please contact Dr. George Kantor for access to the CAD files.
           </p>
+          <img src="mech_design_1.jpg" alt="" class="featured-image">
+          The red lines above represent a rubber band that create tension force and
+          lock the teeth into place.
+          <img src="mech_design_2.jpg" alt="" class="featured-image">
+          <img src="mech_design_3.jpg" alt="" class="featured-image">
 
-          <img src="initial_plan.png" alt="" class="featured-image">
 
-          <p>
-            After this initial plan, the robot moves one step along the found
-            path, rescans the environment and discovers some new sections of the
-            yellow wall and needs to recalculate cost values for affected
-            states. Those modified states are added back to the open set, or a
-            priority queue for which states to explore sorted by lowest cost.
-          </p>
-
-          <h3>Thoughts</h3>
-          <p>
-            My implementation is actually not completely correct because I
-            misunderstood this key line of the algorithm:
-          </p>
-          <img src="dstar_scan_line.png" alt="" class="featured-image">
-          <p>
-            This one, subtle line: "scan graph for changes in edge
-            costs" actually involves a lot of computation if the edge cost
-            calculation is heavy. In our case, edge cost calculation is
-            expensive since every state and rollout needs to be
-            collision-checked and transition costs summed up. I never got around
-            this major roadblock, and had time to only stick with my wrong implementation.
-          </p>
-          <p></p>
 
           <div class="media author-card content-widget-hr">
 
 
             <a href="https://alvinosaur.github.io/AboutMe"><img class="avatar mr-3 avatar-circle"
-                src="../../img/profile_pic.jpg" alt="Alvin Shek"></a>
+                src="../../profile_pic.jpg" alt="Alvin Shek"></a>
 
 
             <div class="media-body">
