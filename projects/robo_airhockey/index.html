@@ -155,21 +155,20 @@
             For CMU's weeklong hackathon, Build18, our team built a vision-guided, robotic airhockey arm. Hoping to
             avoid the typical human v.s single arm that has been done before, we instead imagined up a self-learning
             system with two collaborating arms that adjusts from its mistakes.
-
-            Given only a week, we set the basic system as our first milestone. Our robot would track the hockey puck's
-            position and velocity using computer vision and determine the necessary arm movements to handle this.
+            However, given only a week, we were only able to build a simple
+            deflecting robot controlled by kinematics-driven planning. Our robot would track the hockey puck's
+            position and velocity using computer vision and determine the
+            necessary arm movements to deflect the incoming puck back to the
+            opposite goal.
           </p>
 
           <h3>System Architecture</h3>
-          <a href="https://docs.google.com/document/d/1qybYueyZ2IUJ69JVTjerh5T0Ut0nOVIEDk3_lz92nlM/edit?usp=sharing"
-            target="_blank">
-            <img src="airhockey_overview.jpg" alt="robot airhockey front"
-              style="width:50%;height:100%;position:relative">
-          </a>
+          <img src="airhockey_overview.jpg" alt="robot airhockey front" style="width:50%;height:100%;position:relative">
           The above diagrams show how different processes interact at different
           levels of abstraction. NOTE: There is no "Machine Learning" in this
           project haha. I was just naive and overhyped about ML. The
-          calculations were derived using fundamental kinematics equations.
+          calculations were derived using fundamental kinematics equations as
+          explained below.
 
           <h3>Arm Trajectory Planning</h3>
           <video width="100%" height="100%" poster="airhockey_arm_sim_thumbnail.png" controls muted>
@@ -222,8 +221,9 @@
             Your browser does not support HTML5 video.
           </video>
           <p>
-            We used stepper motors for their accurate position-tracking and high torque. Modifying an existing
-            API(AccelStepper), we were able to have the motor accelerate to the end position to reach a
+            We used stepper motors for their accurate position-tracking and high torque. Modifying the existing
+            <a href="https://www.airspayce.com/mikem/arduino/AccelStepper/" target="_blank">AccelStepper API</a>, we
+            were able to have the motor accelerate to the end position to reach a
             certain velocity and hit the puck at the right time.
           </p>
 

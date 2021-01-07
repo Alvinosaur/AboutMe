@@ -144,12 +144,6 @@
       <div class="article-container">
 
         <div class="article-style">
-          <p><em>In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall
-              2020)
-              - <a href="https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html" target="_blank"
-                rel="noopener">Project
-                Gallery</a></em></p>
-
           <h3>Intro</h3>
 
           <p>Drone racing involves navigating a small quadcopter through a series of gates at high speeds, often
@@ -174,7 +168,7 @@
           angular velocity inputs. We parameterize trajectories
           as fifth order piecewise polynomials parameterized by time. To define
           the Quadratic Programming (QP) problem, we enforce constraints for
-          state derivatives, continuity, and direction at key waypoints to
+          state derivatives, continuity, and direction at key waypoints in
           the trajectory.
         </p>
 
@@ -183,31 +177,25 @@
           Differential flatness is a property
           that allows a nonlinear system to be separated into a
           linear system and a nonlinear transformation mapping
-          between the two systems [11]. We exploit the differential
+          between the two systems. We exploit the differential
           flatness property of quadcopter dynamics to apply feedback
           linearization on the nonlinear dynamics, enabling us to solve
           a linear, transformed system for the optimal controls.
         </p>
 
         <h3>LQR vs MPC</h3>
+
         <img src="lqr_vs_mpc.jpg" alt="" class="featured-image">
+        <br>
         <p>
           The figure above shows how applying feedforward input given a
-          future time horizon helps the drone handle sharp turns
+          future time horizon (ie: MPC) helps the drone handle sharp turns
           well. The LQR controller here would simply attempt to
           follow the current immediate reference pose using feedback
           error from the previous timestep. In the main image at the top, the
           LQR controller causes the drone to undershoot the turn
           completely.
         </p>
-
-        <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
-          style="max-width: 720px; max-height: 369px;">
-          <div style="position: relative">
-            <img src="results_plots.png" alt="" class="featured-image">
-            <!-- <span class="article-header-caption"></span> -->
-          </div>
-        </div>
 
         <div class="media author-card content-widget-hr">
 
