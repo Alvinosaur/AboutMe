@@ -106,14 +106,15 @@
 
           <span class="article-date">
 
-            Dec 8, 2020
+            April 28, 2021
           </span>
 
         </div>
 
         <div class="btn-links mb-3">
 
-          <a class="btn btn-outline-primary my-1 mr-1" href="ECE_Capstone_Final_Report.pdf" target="_blank" rel="noopener">
+          <a class="btn btn-outline-primary my-1 mr-1" href="ECE_Capstone_Final_Report.pdf" target="_blank"
+            rel="noopener">
             PDF
           </a>
 
@@ -122,19 +123,17 @@
             Code
           </a>
 
-          <a class="btn btn-outline-primary my-1 mr-1" href="final_presentation.pdf" target="_blank"
-            rel="noopener">
+          <a class="btn btn-outline-primary my-1 mr-1" href="final_presentation.pdf" target="_blank" rel="noopener">
             Slides
           </a>
 
-          <a class="btn btn-outline-primary my-1 mr-1"
-            href="poster.pdf" target="_blank" rel="noopener">
+          <a class="btn btn-outline-primary my-1 mr-1" href="poster.pdf" target="_blank" rel="noopener">
             Poster
           </a>
 
-          <a class="btn btn-outline-primary my-1 mr-1"
-          href="https://youtu.be/XjX7hMI5hj8" target="_blank" rel="noopener">
-          Video
+          <a class="btn btn-outline-primary my-1 mr-1" href="https://youtu.be/XjX7hMI5hj8" target="_blank"
+            rel="noopener">
+            Video
           </a>
 
         </div>
@@ -143,10 +142,10 @@
       <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
         style="max-width: 720px; max-height: 369px;">
         <div style="position: relative">
-          <a href="https://youtu.be/XjX7hMI5hj8" target="_blank" rel="noopener" >
+          <a href="https://youtu.be/XjX7hMI5hj8" target="_blank" rel="noopener">
             <img src="main.png" alt="" class="featured-image">
           </a>
-          
+
           <span class="article-header-caption"></span>
         </div>
       </div>
@@ -166,9 +165,17 @@
         <div class="article-style">
           <h3>Intro</h3>
 
-          <p>Over  the  last  few  years,  drones  have  become  increas-ingly popular for both recreational and professional videog-raphy.Vloggers  can  take  breathtaking  aerial  shots  oftheir escapades through mountains and fjords.  And duringsearch-and-rescue missions, rescuers can use drone footageto identify victims and monitor their own surroundings tocall for backup if needed.  Yet, despite the numerous use-cases, one bottleneck stands in the way when it comes tocapturing drone footage: manual control.</p>
+          <p>Over the last few years, drones have become increas-ingly popular for both recreational and professional
+            videog-raphy.Vloggers can take breathtaking aerial shots oftheir escapades through mountains and fjords. And
+            duringsearch-and-rescue missions, rescuers can use drone footageto identify victims and monitor their own
+            surroundings tocall for backup if needed. Yet, despite the numerous use-cases, one bottleneck stands in the
+            way when it comes tocapturing drone footage: manual control.</p>
 
-          <p>We created a drone capable of tracking target in real time as they move across the ground. Unlike other drones, which require expensive LiDAR or depth cameras, our system only requires a 2D RGB camera and GPS to estimate the 3D position of targets. Our drone also streams live video feed to a display. To maximize battery life of the drone and reduce weight, all computation is be offloaded to a small, portable computer -- in our case, the Jetson TX1.</p>
+          <p>We created a drone capable of tracking target in real time as they move across the ground. Unlike other
+            drones, which require expensive LiDAR or depth cameras, our system only requires a 2D RGB camera and GPS to
+            estimate the 3D position of targets. Our drone also streams live video feed to a display. To maximize
+            battery life of the drone and reduce weight, all computation is be offloaded to a small, portable computer
+            -- in our case, the Jetson TX1.</p>
         </div>
 
         <h3>System Architecture</h3>
@@ -185,70 +192,99 @@
 
         <div class="article-style">
           <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
-          style="max-width: 720px; max-height: 400px;">
-          <div style="position: relative">
-            <video controls>
-              <source src="full_demo_pred.mp4#t=13,39" type="video/mp4">
-            Your browser does not support the video tag.
-            </video> 
-            <!-- <span class="article-header-caption"></span> -->
+            style="max-width: 720px; max-height: 400px;">
+            <div style="position: relative">
+              <video controls>
+                <source src="full_demo_pred.mp4#t=13,39" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <span class="article-header-caption"></span> -->
+            </div>
           </div>
-        </div>
           <p>
-            We require the target to wear a specific colored shirt and apply RGB color thresholding to filter their pixels in an image. This obtains a raw 2D pixel position. Next, using camera intrinsic parameters (ex: focial length) determined through calibration, we transform 2D pixel values to 3D position with respect to the camera's light sensor. Since we built a full-scale CAD model of our drone, we know the exact Cartesian transformation from the camera sensor to our drone's overall pose. Finally, using the drone's own onboard pose estimation, we can define the target's 3D position in real world space. This can be summarized as:
-            <ul>
-              <li>
-                Image → Camera
-              </li>
-              <li>
-                Camera → Drone
-              </li>
-              <li>
-                Drone → World
-              </li>
-            </ul>
-            
-            More details can be found <a href="https://docs.google.com/document/d/1k8WualHEj0pRNi6kvquVwHG8lyX27G990YWq4Eg_IbQ/edit?usp=sharing" target="_blank" rel="noopener">in this document</a>. We also apply a Linear Kalman Filter to smooth out the final target position.
+            We require the target to wear a specific colored shirt and apply RGB color thresholding to filter their
+            pixels in an image. This obtains a raw 2D pixel position. Next, using camera intrinsic parameters (ex:
+            focial length) determined through calibration, we transform 2D pixel values to 3D position with respect to
+            the camera's light sensor. Since we built a full-scale CAD model of our drone, we know the exact Cartesian
+            transformation from the camera sensor to our drone's overall pose. Finally, using the drone's own onboard
+            pose estimation, we can define the target's 3D position in real world space. This can be summarized as:
+          <ul>
+            <li>
+              Image → Camera
+            </li>
+            <li>
+              Camera → Drone
+            </li>
+            <li>
+              Drone → World
+            </li>
+          </ul>
+
+          More details can be found <a
+            href="https://docs.google.com/document/d/1k8WualHEj0pRNi6kvquVwHG8lyX27G990YWq4Eg_IbQ/edit?usp=sharing"
+            target="_blank" rel="noopener">in this document</a>. We also apply a Linear Kalman Filter to smooth out the
+          final target position.
           </p>
         </div>
 
         <h3>Motion Planning</h3>
         <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
-        style="max-width: 720px; max-height: 400px;">
-        <div style="position: relative">
-          <img src="motion_planning.jpg" alt="Dynamics">
-          <!-- <span class="article-header-caption"></span> -->
+          style="max-width: 720px; max-height: 400px;">
+          <div style="position: relative">
+            <img src="motion_planning.jpg" alt="Dynamics">
+            <!-- <span class="article-header-caption"></span> -->
+          </div>
         </div>
-      </div>
 
         <div class="article-style">
           <p>
-            Now that we have the target's position, we can use this to plan the drone's motion. This involves three key steps:
-            <ul>
-              <li>
-                <b>Drone Dynamics Model: </b> We first need to define a model of the drone’s state and how control inputs affect this state.  We represent the drone’s state as simple 2D position [x, y] with an assumed fixed height of 8m.  We define control input as horizontal velocity:
-                 
-                This means that we cannot rotate the drone to face a target, but must move horizontally.  <i>While these assumptions indeed limit our control of the drone, this behavior  fits  our  use-case: by maintaining sufficient distance from the target, the drone does not need much agility.</i> These  simple  dynamics also allow our computation to meet the required rate specified by the drone’s flight controller.
-              </li>
+            Now that we have the target's position, we can use this to plan the drone's motion. This involves three key
+            steps:
+          <ul>
+            <li>
+              <b>Drone Dynamics Model: </b> We first need to define a model of the drone’s state and how control inputs
+              affect this state. We represent the drone’s state as simple 2D position [x, y] with an assumed fixed
+              height of 8m. We define control input as horizontal velocity:
 
-              <li>
-                <b>Define  Desired  Behavior: </b> Next,  we  need  to  define  some  behavior  for  the  drone.   We  firstly  want the drone to keep the camera focused on the target,meaning the target should stay in the center of the image.  This objective can be represented as a maximization of the dot-product between two vectors:
-                <img src="dot_prod.png" alt="dot product"> 
-                where <b>v1</b> is the fixed vector from the camera center to the center pixel on the image plane and <b>v2</b> is the dynamic  vector  from  the  drone’s  camera  to  the  3D target  position,  obtained  from  the  target  detection pipeline. Second, we optimize for smooth, stable video footage,and this can be achieved by minimizing the motion of the drone represented in terms of velocity control input:
-                <img src="stability.png" alt="L2 norm of velocity"> 
-                where <b>v</b> = [vx, vy] is the velocity control input.  We optimize these two objectives over a time horizon of 1 second with a step size of dt= 0.1 seconds.  We use the predicted target trajectory inside this optimization.  We have tuned weights for the above two costs to achieve desired behavior.
-              </li>
+              This means that we cannot rotate the drone to face a target, but must move horizontally. <i>While these
+                assumptions indeed limit our control of the drone, this behavior fits our use-case: by maintaining
+                sufficient distance from the target, the drone does not need much agility.</i> These simple dynamics
+              also allow our computation to meet the required rate specified by the drone’s flight controller.
+            </li>
 
-              <li>
-                <b>Solve for Behavior:</b> Now that we have defined our formulation, we can solve this using an optimization package.  In our case, we use the Scipy Optimization package.  We use a Model Predictive Control formulation to optimize over multiple timesteps, but only execute  the  first  step  of  this  plan.   Every  iteration, we  generate  an  entire  trajectory,  but  execute  onlythe  first  step.   This  ensures  our  motion  is  not  only optimal,  but  is  reactive  to  position  drift  and  external disturbances like wind due to the feedback loop planning
-              </li>
+            <li>
+              <b>Define Desired Behavior: </b> Next, we need to define some behavior for the drone. We firstly want the
+              drone to keep the camera focused on the target,meaning the target should stay in the center of the image.
+              This objective can be represented as a maximization of the dot-product between two vectors:
+              <img src="dot_prod.png" alt="dot product">
+              where <b>v1</b> is the fixed vector from the camera center to the center pixel on the image plane and
+              <b>v2</b> is the dynamic vector from the drone’s camera to the 3D target position, obtained from the
+              target detection pipeline. Second, we optimize for smooth, stable video footage,and this can be achieved
+              by minimizing the motion of the drone represented in terms of velocity control input:
+              <img src="stability.png" alt="L2 norm of velocity">
+              where <b>v</b> = [vx, vy] is the velocity control input. We optimize these two objectives over a time
+              horizon of 1 second with a step size of dt= 0.1 seconds. We use the predicted target trajectory inside
+              this optimization. We have tuned weights for the above two costs to achieve desired behavior.
+            </li>
 
-            </ul>
+            <li>
+              <b>Solve for Behavior:</b> Now that we have defined our formulation, we can solve this using an
+              optimization package. In our case, we use the Scipy Optimization package. We use a Model Predictive
+              Control formulation to optimize over multiple timesteps, but only execute the first step of this plan.
+              Every iteration, we generate an entire trajectory, but execute onlythe first step. This ensures our motion
+              is not only optimal, but is reactive to position drift and external disturbances like wind due to the
+              feedback loop planning
+            </li>
+
+          </ul>
           </p>
         </div>
         <h3>Thoughts</h3>
         <p>
-          Though we only had a few months to complete project, I really want to extend how the target interacts with the drone. Rather than purely following the target, the target should be able to use hand gestures to control the drone. By waving one's arm from left to right, the drone should perform a fast, panoramic sweep from the left side of the target to the right and pull back up. 
+          Though we only had a few months to complete project, I really want to extend how the target interacts with the
+          drone. Rather than purely following the target, the target should be able to use hand gestures to control the
+          drone. By waving one's arm from left to right, the drone should perform a fast, panoramic sweep from the left
+          side of the target to the right and pull back up.
 
         </p>
 
