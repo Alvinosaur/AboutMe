@@ -96,32 +96,58 @@
     </div>
   </nav> -->
 
-  <div class="page-body bg-light">
+
+  
+  <div class="page-body bg-white">
     <article class="article article-project">
 
       <div class="article-container pt-3">
-        <h1>Learning from Physical Human Feedback: An Object-Oriented  One-Shot Adaptation Method</h1>
-        <h3>Alvin Shek, Rui Chen, Changliu Liu</h3>
+        <center>
+        <h3>Learning from Physical Human Feedback: <br>An Object-Centric  One-Shot Adaptation Method</h3> 
+      </center>
+<!-- 
+          <div class="table-like authors" style="justify-content:space-evenly;max-width:800px;margin:auto;">
+            <div><center><span><a href="https://alvinosaur.github.io/AboutMe/" target="_blank"
+              rel="noopener">Alvin Shek</a></span></center>
+              <center><span><a href="https://ruichen.pub/" target="_blank"
+                rel="noopener">Rui Chen</a></span></center>
+                <center><span><a href="http://www.cs.cmu.edu/~cliu6/" target="_blank"
+                  rel="noopener">Changliu Liu</a></span></center>
+             </div>
+    
+          </div> -->
+
+          <center>
+            <!-- <br> -->
+            <nobr><a href="https://alvinosaur.github.io/AboutMe/" target="_blank"
+              rel="noopener">Alvin Shek</a></nobr>    <nobr><a href="https://ruichen.pub/" target="_blank"
+                rel="noopener">Rui Chen</a></nobr>    <nobr><a href="http://www.cs.cmu.edu/~cliu6/" target="_blank"
+                  rel="noopener">Changliu Liu</a></nobr>
+                  <br>
+            <nobr>Carnegie Mellon University</nobr>
+            <!-- <img style="vertical-align:middle" src="mcp_teaser.png" width="100%" height="inherit">		 -->
+          </center>
+
         <!-- <h4></h4> -->
 
         <div class="article-metadata">
-
+<!-- 
           <span class="article-date">
 
             Feb 28, 2022
-          </span>
+          </span> -->
 
         </div>
 
         <div class="btn-links mb-3">
 
-          <a class="btn btn-outline-primary my-1 mr-1" href="" target="_blank"
+          <a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/abs/2203.04951" target="_blank"
             rel="noopener">
             Paper
           </a>
 
           <a class="btn btn-outline-primary my-1 mr-1" href="" target="_blank" rel="noopener">
-            Slides
+            Code (TBD)
           </a>
 
         </div>
@@ -130,7 +156,11 @@
       <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
         style="max-width: 720px; max-height: 369px;">
         <div style="position: relative">
-          <img src="main.png" alt="" class="featured-image">
+          <div class="videoWrapper">
+            <!-- Copy & Pasted from YouTube -->
+            <!-- Source: https://css-tricks.com/fluid-width-video/ -->
+            <iframe width="560" height="349" src="YOUTUBE_VIDEO_LINK_TODO" frameborder="0" allowfullscreen></iframe>
+          </div>
           <span class="article-header-caption"></span>
         </div>
       </div>
@@ -139,113 +169,42 @@
       <div class="article-container">
 
         <div class="article-style">
-          <h3>Intro</h3>
-          <p>TODO: Add image + explain the "singularity" issue of potential field methods. </p>
-        </div>
-
-        <h3>Framework</h3>
-
-        <div class="article-style">
-          <!-- <div class="article-header article-container featured-image-wrapper mt-4 mb-4"
-            style="max-width: 720px; max-height: 400px;">
-            
-          </div> -->
-          <!-- <div style="position: relative">
-            <video controls>
-              <source src="demo.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div> -->
-          <!-- <p>
-            The above video shows me demonstrating the final performance 
-            of our model. As I perform various hand motions that involve 
-            multiple Cartesian dimesnsions at the same time (ex: translating from left to right while rotating), we see that 
-            the model is able to interpret this correctly and infer the correct robot motion. Specfically, our model takes as input 6D
-            translational and rotational velocities of each finger and palm of the right hand, which we calculate from OpenPose finger keypoint positions. Our model then outputs 6D translational and rotational 
-            velocities of the robot end-effector. 
-          </p>
-          <div style="position: relative">
-            <img src="data_collection.png" alt="Data Collection">
-          </div>
+          <font size="4">
           <p>
-            To train this model, we collected data from a series of human-human collaboration trials. One user would watch an animation of
-            the desired motion of a box and would try generating the hand motion
-            to match this. A second user would interpret the first user's hand motions and move a real, physical box whose 6D pose would be tracked. As a result, we would obtain both the hand motion input to the model as
-            well as the ground truth object motion representing the robot end effector.
+            For robots to be effectively deployed in novel environments and tasks, they must be able to understand the feedback expressed by humans during intervention. This can either correct undesirable behavior or indicate additional preferences. Existing methods either require repeated episodes of interactions or assume prior known reward features, which is data-inefficient and can hardly transfer to new tasks. We relax these assumptions by describing human tasks in terms of object-centric sub-tasks and interpreting physical interventions in <em>relation to specific objects</em>. Our method, Object Preference Adaptation (OPA), is composed of two key stages: 1) pre-training a base policy to produce a wide variety of behaviors, and 2) online-updating only certain weights in the model according to human feedback. The key to our fast, yet simple adaptation is that general interaction dynamics between agents and objects are fixed, and only object-specific preferences are updated. Our adaptation occurs online, requires only one human intervention (one-shot), and produces new behaviors never seen during training. Trained on cheap synthetic data instead of expensive human demonstrations, our policy demonstrates impressive adaptation to human perturbations on challenging, realistic tasks in our user study. 
           </p>
+        </font>
         </div>
 
-        <h3>Probabilistic Formulation: Generative Process</h3>
-        <p>
-          There are several key challenges in interpreting human commands. First, people think and act differently, and this can cause
-          different users' hand motion styles to vary drastically. Machine Learning models expect inputs to come from a distribution that matches what was seen at training. The diversity in user styles means
-          that a new user's style may not have been seen at training, which can cause unpredictable model outputs. To handle this diversity, 
-          we draw inspiration from <a href="https://arxiv.org/abs/1901.05761 " target="_blank" rel="noopener">Attentive Neural Processes</a> by training our model to condition on some prior "context" or calibration data collected by previous users. The idea is that the model can reference previously seen data to help it interpret new user data. This is done through an attention mechanism over LSTM hidden states that capture latent features of a time series of both hand and desired object motion. Please see the "Encoder Cell" under Section V.A of our paper for more details.
-        </p>
-        <p>Another challenge is in modeling human motion uncertainty. Given the exact same desired object motion, a human may execute different hand motions in different trials. Our model needs to handle this stochasticity in the expert demonstration. We formulate our problem as a generative process with the goal of maximizing the expected log-probability of
-        the ground truth object motion when conditioned on the input hand motion. Please see Eqn. 4 in our paper for details.
-        <p>
-          A final challenge is that our robot will operate in close proximity to humans. From a human perspective, it is 
-          easy to predict the behavior of smooth motions but not 
-          sharp, sudden motions. As a result, we need our learned robot policy
-          to also output smooth, continuous motions. We achieve this by formulating our generative process to condition also on the previous 
-          model output. This way, our model's future output is dependent on its previous output. We train this dependency using Teacher Forcing. 
-        </p>
+        <h3>Ablation Studies (Coming Soon)</h3>
 
-        <h3>Conclusion</h3>
-        <p>
-          This project helped me realize the many challenges of interacting with humans that collaborative robots must address. Many more issues
-          exist that were not covered in this project, and I am currently exploring these further as a part of my masters thesis.
-        </p> -->
-
-
-        <!-- <div class="media author-card content-widget-hr">
-
-
-          <a href="https://alvinosaur.github.io/AboutMe"><img class="avatar mr-3 avatar-circle"
-              src="../../profile_pic.jpg" alt="Alvin Shek"></a>
-
-
-          <div class="media-body">
-            <h5 class="card-title"><a href="https://alvinosaur.github.io/AboutMe">Alvin Shek</a></h5>
-            <h6 class="card-subtitle">Robotics Masters Student @ CMU</h6>
-            <p class="card-text">Robotics, Computer Vision, Deep Learning, Reinforcement Learning.</p>
-            <ul class="network-icon" aria-hidden="true">
-
-              <li>
-                <a href="mailto:ashek@andrew.cmu.edu">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://github.com/Alvinosaur" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://www.linkedin.com/in/alvinshek/" target="_blank" rel="noopener">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-
-              <li>
-                <a href="../../Alvin_Shek_Resume.pdf" target="_blank" rel="noopener">
-                  <i class="far fa-address-book"></i>
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
+        <!-- <h4>"Singularities" of Potential Fields</h4>
+        <div class="article-style">
+          <font size="4">
+          <p>
+            In Section 3-B of the paper, we mentioned how position relation network overall outputs a push-pull force on the agent. We allow 
+            this direction to be freely determined by the network. Potential field methods also use this approach, but constrain the direction to be parallel to each agent-object vector. Only magnitude and sign of the vector can change. This may seem like an intuitive way to enforce structure in the network and reduce complexity, but this constraint fails during “singularities” where no orthogonal component is available to avoid an obstacle lying in the same direction as the goal.
+            
+            <div style="position: relative">
+              <img src="forced_free.png" alt="" class="featured-image">
+            </div>
+            The two images compare "forced" and "free" direction behavior respectively at a single timestep with the light pink agent, blue expert, Notice on the left, since
+            the red repulsor object lies directly on the path to the goal, 
+            no orthogonal force component can help the agent avoid the 
+            obstacle. On the right, however, the force direction contributed
+            by the repulsor object has an orthogonal component, allowing
+            the agent to avoid the repulsor. This is shown fully in the video below:
+            <div style="position: relative">
+              <img src="forced_free.png" alt="" class="featured-image">
+            </div>
+            <br>
+          
+          </p>
+        </font>
         </div> -->
 
-
-        <div class="project-related-pages content-widget-hr">
-
-        </div>
       </div>
+      <br>
     </article>
   </div>
 
