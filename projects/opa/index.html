@@ -130,11 +130,11 @@
         <!-- <h4></h4> -->
 
         <div class="article-metadata">
-          <!-- 
+
           <span class="article-date">
 
-            Feb 28, 2022
-          </span> -->
+            Mar 13, 2022
+          </span>
 
         </div>
 
@@ -151,7 +151,7 @@
           </a>
 
           <a class="btn btn-outline-primary my-1 mr-1" href="" target="_blank" rel="noopener">
-            Code (TBD)
+            Code (released by March 14)
           </a>
 
         </div>
@@ -201,7 +201,8 @@
         <div class="article-style">
           <font size="4">
             <p>
-              In Section 3-B of the paper, we mentioned how position relation network overall outputs a push-pull force
+              In Section 3-B of the paper, we mentioned how the position relation network overall outputs a push-pull
+              force
               on the agent. We allow
               this direction to be freely determined by the network. Potential field methods also use this approach, but
               constrain the direction to be parallel to each agent-object vector. Only magnitude and sign of the vector
@@ -211,13 +212,16 @@
 
             <div style="position: relative">
               <video controls>
-                <source src="forced_free.mp4" type="video/mp4">
+                <source src="fixed_vs_free.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
             The above video compares "forced" and "free" direction behavior respectively. As the blue agent moves to the
-            yellow goal in both cases, look at the "force" contribution of the goal and the repel object. Notice how on
-            the left side, the model correctly predicts a force vector pointing away from the red repel object. However,
+            yellow goal in both cases, pay attention to the "force" contribution of the goal and the repel object shown
+            as yellow and red arrows respectively.
+            Notice how in the "forced" version, the model correctly predicts a force vector pointing away from the red
+            repel
+            object. However,
             since there is no orthogonal component, the blue agent cannot avoid moving straight through the repel object
             as the goal force vector dominates. On the right side, however, the force direction contributed by the
             repulsor object has an orthogonal component, allowing the agent to avoid the repulsor.
@@ -227,32 +231,41 @@
         </div>
 
         <h4>Scalability with Objects</h4>
-        <!-- <div class="article-style">
+        <div class="article-style">
           <font size="4">
             <p>
-              One of our method's key advantages is scalability in the number of objects. Classical motion planners and
-              trajectory optimization
-              may
-
-            <div style="position: relative">
-              <img src="forced_free.png" alt="" class="featured-image">
-            </div>
-            The two images compare "forced" and "free" direction behavior respectively at a single timestep with the
-            light pink agent, blue expert, Notice on the left, since
-            the red repulsor object lies directly on the path to the goal,
-            no orthogonal force component can help the agent avoid the
-            obstacle. On the right, however, the force direction contributed
-            by the repulsor object has an orthogonal component, allowing
-            the agent to avoid the repulsor. This is shown fully in the video below:
+              Graph-based models and neural networks have an advantage of being invariant to the order and number of
+              objects in a scene. We only trained our model's position relation network in scenarios with
+              two other objects: repel and attract. Ideally, our model should be able to generalize to more objects.
+              Here, we examine this generalization ability. The below video shows our model on scenarios with 4 objects:
+              two repel, two attract. The text at the center
+              of each object displays the attention value placed on that object in the format att: value.
             <div style="position: relative">
               <video controls>
-                <source src="forced_free.mp4" type="video/mp4">
+                <source src="scale_4_objs.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
+            Overall, our model seems
+            to behave well. Also, looking at the first few seconds, we see that our model correctly places high
+            attention on objects directly "ahead" of it and decreases attention once "past" them. This is because of our
+            state-based feature Goal-Relative Distance (Section 3-C). Next, we increase the number of objects to 6:
+            <div style="position: relative">
+              <video controls>
+                <source src="scale_6_objs.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            Clearly, our model begins to suffer issues such as getting stuck in local optima when the force
+            contributions of objects equalize. Also, our model seems to lose its ability to prioritize objects that are
+            nearby and gets repelled by objects very far away. We can see that both close and far away objects are given
+            similar attention values. This is strange since one of the state-based features that we provide the model is
+            size-relative distance (Section 3-C), so ideally this issue would not arise. We are investigating this, but
+            possibly a work-around is to simply introduce a training curriculum during our model's pre-training phase.
+            Initially only train with 2-object scenarios, and slowly increase this as training progresses.
             </p>
           </font>
-        </div> -->
+        </div>
       </div>
       <br>
     </article>
