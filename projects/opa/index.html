@@ -10,7 +10,7 @@
   <meta name="description" content="Personal Website">
   <meta name="author" content="Alvin Shek">
 
-  <title>Learning  from  Physical  Human  Feedback:An  Object-Oriented  One-Shot  Adaptation  Method</title>
+  <title>Learning from Physical Human Feedback:An Object-Oriented One-Shot Adaptation Method</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -97,15 +97,15 @@
   </nav> -->
 
 
-  
+
   <div class="page-body bg-white">
     <article class="article article-project">
 
       <div class="article-container pt-3">
         <center>
-        <h3>Learning from Physical Human Feedback: <br>An Object-Centric  One-Shot Adaptation Method</h3> 
-      </center>
-<!-- 
+          <h3>Learning from Physical Human Feedback: <br>An Object-Centric One-Shot Adaptation Method</h3>
+        </center>
+        <!-- 
           <div class="table-like authors" style="justify-content:space-evenly;max-width:800px;margin:auto;">
             <div><center><span><a href="https://alvinosaur.github.io/AboutMe/" target="_blank"
               rel="noopener">Alvin Shek</a></span></center>
@@ -117,21 +117,20 @@
     
           </div> -->
 
-          <center>
-            <!-- <br> -->
-            <nobr><a href="https://alvinosaur.github.io/AboutMe/" target="_blank"
-              rel="noopener">Alvin Shek</a></nobr>    <nobr><a href="https://ruichen.pub/" target="_blank"
-                rel="noopener">Rui Chen</a></nobr>    <nobr><a href="http://www.cs.cmu.edu/~cliu6/" target="_blank"
-                  rel="noopener">Changliu Liu</a></nobr>
-                  <br>
-            <nobr>Carnegie Mellon University</nobr>
-            <!-- <img style="vertical-align:middle" src="mcp_teaser.png" width="100%" height="inherit">		 -->
-          </center>
+        <center>
+          <!-- <br> -->
+          <nobr><a href="https://alvinosaur.github.io/AboutMe/" target="_blank" rel="noopener">Alvin Shek</a></nobr>   
+          <nobr><a href="https://ruichen.pub/" target="_blank" rel="noopener">Rui Chen</a></nobr>    <nobr><a
+              href="http://www.cs.cmu.edu/~cliu6/" target="_blank" rel="noopener">Changliu Liu</a></nobr>
+          <br>
+          <nobr>Carnegie Mellon University</nobr>
+          <!-- <img style="vertical-align:middle" src="mcp_teaser.png" width="100%" height="inherit">		 -->
+        </center>
 
         <!-- <h4></h4> -->
 
         <div class="article-metadata">
-<!-- 
+          <!-- 
           <span class="article-date">
 
             Feb 28, 2022
@@ -164,7 +163,10 @@
           <div class="videoWrapper">
             <!-- Copy & Pasted from YouTube -->
             <!-- Source: https://css-tricks.com/fluid-width-video/ -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rBi9v9m3wJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rBi9v9m3wJ8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
           </div>
           <span class="article-header-caption"></span>
         </div>
@@ -175,10 +177,22 @@
         <img src="thumbnail.png" alt="" class="featured-image">
         <div class="article-style">
           <font size="4">
-          <p>
-            For robots to be effectively deployed in novel environments and tasks, they must be able to understand the feedback expressed by humans during intervention. This can either correct undesirable behavior or indicate additional preferences. Existing methods either require repeated episodes of interactions or assume prior known reward features, which is data-inefficient and can hardly transfer to new tasks. We relax these assumptions by describing human tasks in terms of object-centric sub-tasks and interpreting physical interventions in <em>relation to specific objects</em>. Our method, Object Preference Adaptation (OPA), is composed of two key stages: 1) pre-training a base policy to produce a wide variety of behaviors, and 2) online-updating only certain weights in the model according to human feedback. The key to our fast, yet simple adaptation is that general interaction dynamics between agents and objects are fixed, and only object-specific preferences are updated. Our adaptation occurs online, requires only one human intervention (one-shot), and produces new behaviors never seen during training. Trained on cheap synthetic data instead of expensive human demonstrations, our policy demonstrates impressive adaptation to human perturbations on challenging, realistic tasks in our user study. 
-          </p>
-        </font>
+            <p>
+              For robots to be effectively deployed in novel environments and tasks, they must be able to understand the
+              feedback expressed by humans during intervention. This can either correct undesirable behavior or indicate
+              additional preferences. Existing methods either require repeated episodes of interactions or assume prior
+              known reward features, which is data-inefficient and can hardly transfer to new tasks. We relax these
+              assumptions by describing human tasks in terms of object-centric sub-tasks and interpreting physical
+              interventions in <em>relation to specific objects</em>. Our method, Object Preference Adaptation (OPA), is
+              composed of two key stages: 1) pre-training a base policy to produce a wide variety of behaviors, and 2)
+              online-updating only certain weights in the model according to human feedback. The key to our fast, yet
+              simple adaptation is that general interaction dynamics between agents and objects are fixed, and only
+              object-specific preferences are updated. Our adaptation occurs online, requires only one human
+              intervention (one-shot), and produces new behaviors never seen during training. Trained on cheap synthetic
+              data instead of expensive human demonstrations, our policy demonstrates impressive adaptation to human
+              perturbations on challenging, realistic tasks in our user study.
+            </p>
+          </font>
         </div>
 
         <h3>Ablation Studies</h3>
@@ -186,42 +200,47 @@
         <h4>"Singularities" of Potential Fields</h4>
         <div class="article-style">
           <font size="4">
-          <p>
-            In Section 3-B of the paper, we mentioned how position relation network overall outputs a push-pull force on the agent. We allow 
-            this direction to be freely determined by the network. Potential field methods also use this approach, but constrain the direction to be parallel to each agent-object vector. Only magnitude and sign of the vector can change. This may seem like an intuitive way to enforce structure in the network and reduce complexity, but this constraint fails during “singularities” where no orthogonal component is available to avoid an obstacle lying in the same direction as the goal.
-            
-            <div style="position: relative">
-              <img src="forced_free.png" alt="" class="featured-image">
-            </div>
-            The two images compare "forced" and "free" direction behavior respectively at a single timestep with the light pink agent, blue expert, Notice on the left, since
-            the red repulsor object lies directly on the path to the goal, 
-            no orthogonal force component can help the agent avoid the 
-            obstacle. On the right, however, the force direction contributed
-            by the repulsor object has an orthogonal component, allowing
-            the agent to avoid the repulsor. This is shown fully in the video below:
+            <p>
+              In Section 3-B of the paper, we mentioned how position relation network overall outputs a push-pull force
+              on the agent. We allow
+              this direction to be freely determined by the network. Potential field methods also use this approach, but
+              constrain the direction to be parallel to each agent-object vector. Only magnitude and sign of the vector
+              can change. This may seem like an intuitive way to enforce structure in the network and reduce complexity,
+              but this constraint fails during “singularities” where no orthogonal component is available to avoid an
+              obstacle lying in the same direction as the goal.
+
             <div style="position: relative">
               <video controls>
                 <source src="forced_free.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-          </p>
-        </font>
+            The above video compares "forced" and "free" direction behavior respectively. As the blue agent moves to the
+            yellow goal in both cases, look at the "force" contribution of the goal and the repel object. Notice how on
+            the left side, the model correctly predicts a force vector pointing away from the red repel object. However,
+            since there is no orthogonal component, the blue agent cannot avoid moving straight through the repel object
+            as the goal force vector dominates. On the right side, however, the force direction contributed by the
+            repulsor object has an orthogonal component, allowing the agent to avoid the repulsor.
+
+            </p>
+          </font>
         </div>
 
         <h4>Scalability with Objects</h4>
-        <div class="article-style">
+        <!-- <div class="article-style">
           <font size="4">
-          <p>
-            One of our method's key advantages is scalability in the number of objects. Classical motion planners and trajectory optimization
-            may 
-            
+            <p>
+              One of our method's key advantages is scalability in the number of objects. Classical motion planners and
+              trajectory optimization
+              may
+
             <div style="position: relative">
               <img src="forced_free.png" alt="" class="featured-image">
             </div>
-            The two images compare "forced" and "free" direction behavior respectively at a single timestep with the light pink agent, blue expert, Notice on the left, since
-            the red repulsor object lies directly on the path to the goal, 
-            no orthogonal force component can help the agent avoid the 
+            The two images compare "forced" and "free" direction behavior respectively at a single timestep with the
+            light pink agent, blue expert, Notice on the left, since
+            the red repulsor object lies directly on the path to the goal,
+            no orthogonal force component can help the agent avoid the
             obstacle. On the right, however, the force direction contributed
             by the repulsor object has an orthogonal component, allowing
             the agent to avoid the repulsor. This is shown fully in the video below:
@@ -231,9 +250,9 @@
                 Your browser does not support the video tag.
               </video>
             </div>
-          </p>
-        </font>
-        </div>
+            </p>
+          </font>
+        </div> -->
       </div>
       <br>
     </article>
