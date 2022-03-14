@@ -190,7 +190,10 @@
               object-specific preferences are updated. Our adaptation occurs online, requires only one human
               intervention (one-shot), and produces new behaviors never seen during training. Trained on cheap synthetic
               data instead of expensive human demonstrations, our policy demonstrates impressive adaptation to human
-              perturbations on challenging, realistic tasks in our user study.
+              perturbations on challenging, realistic tasks in our user study. <a href="https://arxiv.org/abs/2203.04951" target="_blank"
+              rel="noopener">
+              More details provided in the paper. 
+            </a>
             </p>
           </font>
         </div>
@@ -246,7 +249,7 @@
                 <source src="scale_4_objs.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <figcaption>Model behavior with 4 objects</figcaption>
+              <figcaption>Model behavior with <b>4 objects</b></figcaption>
             </div>
             Overall, our model seems
             to behave well. Also, looking at the first few seconds, we see that our model correctly places high
@@ -257,10 +260,10 @@
                 <source src="scale_6_objs.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <figcaption>Model behavior with 6 objects</figcaption>
+              <figcaption>Model behavior with <b>6 objects</b></figcaption>
             </div>
             Clearly, our model begins to suffer issues such as getting stuck in local optima when the force
-            contributions of objects equalize. Also, our model seems to lose its ability to prioritize objects that are
+            contributions of objects equalize. This shows that local optima's are still a problem when a method lacks the ability to plan in the future. Also, our model seems to lose its ability to prioritize objects that are
             nearby and gets repelled by objects very far away. We can see that both close and far away objects are given
             similar attention values. This is strange since one of the state-based features that we provide the model is
             size-relative distance (Section 3-C), so ideally this issue would not arise. We are investigating this, but
