@@ -40,7 +40,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="description"
+<<<<<<< HEAD
     content="In top-5 among 46 projects in the course @ CMU 11-785 - Introduction to Deep Learning (Fall 2020) - [Project Gallery](https://deeplearning.cs.cmu.edu/F20/gallery/gallery.html)">
+=======
+    content="Project page for the paper: Learning from Physical Human Feedback: <br>An Object-Centric One-Shot Adaptation Method">
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -151,7 +155,11 @@
           </a>
 
           <a class="btn btn-outline-primary my-1 mr-1" href="" target="_blank" rel="noopener">
+<<<<<<< HEAD
             Code (released by March 14)
+=======
+            Code (released by March 17)
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
           </a>
 
         </div>
@@ -190,7 +198,14 @@
               object-specific preferences are updated. Our adaptation occurs online, requires only one human
               intervention (one-shot), and produces new behaviors never seen during training. Trained on cheap synthetic
               data instead of expensive human demonstrations, our policy demonstrates impressive adaptation to human
+<<<<<<< HEAD
               perturbations on challenging, realistic tasks in our user study.
+=======
+              perturbations on challenging, realistic tasks in our user study. <a href="https://arxiv.org/abs/2203.04951" target="_blank"
+              rel="noopener">
+              More details provided in the paper. 
+            </a>
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
             </p>
           </font>
         </div>
@@ -215,6 +230,10 @@
                 <source src="fixed_vs_free.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+<<<<<<< HEAD
+=======
+              <figcaption>Forced vs free force contributions</figcaption>
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
             </div>
             The above video compares "forced" and "free" direction behavior respectively. As the blue agent moves to the
             yellow goal in both cases, pay attention to the "force" contribution of the goal and the repel object shown
@@ -245,6 +264,10 @@
                 <source src="scale_4_objs.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+<<<<<<< HEAD
+=======
+              <figcaption>Model behavior with <b>4 objects</b></figcaption>
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
             </div>
             Overall, our model seems
             to behave well. Also, looking at the first few seconds, we see that our model correctly places high
@@ -255,9 +278,16 @@
                 <source src="scale_6_objs.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+<<<<<<< HEAD
             </div>
             Clearly, our model begins to suffer issues such as getting stuck in local optima when the force
             contributions of objects equalize. Also, our model seems to lose its ability to prioritize objects that are
+=======
+              <figcaption>Model behavior with <b>6 objects</b></figcaption>
+            </div>
+            Clearly, our model begins to suffer issues such as getting stuck in local optima when the force
+            contributions of objects equalize. This shows that local optima's are still a problem when a method lacks the ability to plan in the future. Also, our model seems to lose its ability to prioritize objects that are
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
             nearby and gets repelled by objects very far away. We can see that both close and far away objects are given
             similar attention values. This is strange since one of the state-based features that we provide the model is
             size-relative distance (Section 3-C), so ideally this issue would not arise. We are investigating this, but
@@ -266,6 +296,20 @@
             </p>
           </font>
         </div>
+<<<<<<< HEAD
+=======
+
+        <h4>Tuning the Adaptation Learning Rate</h4>
+        <div class="article-style">
+          <font size="4">
+            <p>
+
+            </p>
+          </font>
+        </div>
+        
+
+>>>>>>> 2b603d7d3ecc406280345f3c83e1041e56530272
       </div>
       <br>
     </article>
