@@ -151,7 +151,7 @@
           </a>
 
           <a class="btn btn-outline-primary my-1 mr-1" href="" target="_blank" rel="noopener">
-            Code (released by March 22 (sorry!))
+            Code (released by March 27 (sorry!))
           </a>
 
         </div>
@@ -199,6 +199,25 @@
         </div>
 
         <h3>Ablation Studies</h3>
+
+        <h4>Zero-shot Transfer to Different Environment Settings</h4>
+        <div class="article-style">
+          <font size="4">
+            <p>
+              A major advantage of defining our policy <em>relative</em> to objects and learning features for <em>object-centric behavior</em> is that our policy naturally handles different environment settings. This is crucial: robots should be flexible in their behavior when objects get shifted and rotated around. The video below shows an extension of task 3 from our paper that examines behavior of the policy as the scanner's pose changes. Given human correction in an initial setting A, the policy should still behave correctly in different settings B and C without the need for additional supervision (zero-shot).
+              <div style="position: relative">
+                <video controls>
+                  <source src="handling_new_obj_2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>Four episodes are shown: (1) human correction in setting A, (2) updated robot policy in setting A, (3) same policy transferred to setting B, and (4) same policy transferred to setting C.</figcaption>
+              </div>
+              We can see that the robot's behavior can change dramatically 
+              to handle changes to the scanner's pose. This shows the power 
+              of learning behavior for specific objects. While this object-centric paradigm may not solve all tasks, we argue this is crucial for successful generalization.
+            </p>
+          </font>
+        </div>
 
         <h4>"Singularities" of Potential Fields</h4>
         <div class="article-style">
